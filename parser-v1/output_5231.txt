@@ -1,0 +1,48 @@
+
+NEW KEYWORDS AND REUSE TIMES :
++-----------------------------------------------------------+-------------+
+|                       KEY WORDS NAME                      | REUSE TIMES |
++-----------------------------------------------------------+-------------+
+|          Prepare The Existing Asset Tag And Item          |      1      |
+|               Open Item And Update Asset Tag              |      1      |
+|            Warning Message Should Be Displayed            |      2      |
+| Warning Icon Should Be Shown At The Right Side Of TextBox |      2      |
+|            Item Asset Tag Should Not Be Updated           |      2      |
+|                 Update Asset Tag And Type                 |      1      |
+|   Items List::Pick Unselected Content From Dropdown List  |      1      |
++-----------------------------------------------------------+-------------+
+
+OLD KEYWORDS AND REUSE TIMES :
++---------------------------------------------------+-------------+
+|                   KEY WORDS NAME                  | REUSE TIMES |
++---------------------------------------------------+-------------+
+|               On The Items List Page              |      1      |
+|                       Login                       |      1      |
+|           Input Text After It Is Visible          |      4      |
+|         Input Password After It Is Visible        |      1      |
+|          Click Button After It Is Visible         |      5      |
+|                     Click Tab                     |      1      |
+|                     Hover Tab                     |      1      |
+|           Mouse Over After It Is Visible          |      1      |
+| Items List::Wait Until Items List Page Is Visible |      1      |
+|          Select Frame After It Is Visible         |      13     |
+|            Open An Item With Edit Mode            |      1      |
+|          Items List::Select Item By Name          |      1      |
+|           Press Key After It Is Visible           |      1      |
+|         Click Element After It Is Visible         |      4      |
+|          Items List::Click ToolBar Button         |      3      |
+|       Items List::Wait Until Item Is Opened       |      3      |
+|          Items List::Fill In Detail Field         |      3      |
+|                  Is Field Enabled                 |      3      |
+|                 Is Dropdown Field                 |      3      |
+|                Input Field Content                |      2      |
+| Items List::The Toolbar Button Should Be Disabled |      2      |
+|       Items List::Close The Current Item Tab      |      2      |
+|       Items List::Warning Dialog::Click Yes       |      2      |
+|              Value Of Field Should Be             |      2      |
+|                 Open Dropdown List                |      1      |
+|            Get Input Text By Field Name           |      1      |
+|            Get Text After It Is Visible           |      1      |
+|        Input Dropdown Field And Press Enter       |      1      |
+|                       Logoff                      |      1      |
++---------------------------------------------------+-------------+

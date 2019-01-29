@@ -1,0 +1,50 @@
+
+TMD-5231 NEW KEYWORDS :
++----------------------------------------------------------------+
+|                         KEYWORDS NAME                          |
++----------------------------------------------------------------+
+|            The Item Asset Tag Should Not Be Updated            |
+|                      Input Field Content                       |
+|                    Value Of Field Should Be                    |
+|                   Update Asset Tag And Type                    |
+|                 Open Item And Update Asset Tag                 |
+|            The Warining Message Should Be Displayed            |
+|               Click Element After It Is Visible                |
+|              Input Dropdown Field And Press Enter              |
+|     Items List::Pick Unselected Content From Dropdown List     |
+|                  Open An Item With Edit Mode                   |
+|                Items List::Fill In Detail Field                |
+|       Items List::The Toolbar Button Should Be Disabled        |
+|             Items List::Warning Dialog::Click Yes              |
+|                Items List::Click ToolBar Button                |
+|                       Is Dropdown Field                        |
+|             Items List::Wait Until Item Is Opened              |
+| The Warining Icon Should Be Shown At The Right Side Of TextBox |
+|             Items List::Close The Current Item Tab             |
+|            Prepare The Existing Asset Tag And Item             |
+|                        Is Field Enabled                        |
+|                Items List::Select Item By Name                 |
+|                       Open Dropdown List                       |
+|                  Get Input Text By Field Name                  |
++----------------------------------------------------------------+
+
+
+TMD-5231 REUSE KEYWORDS :
++---------------------------------------------------+
+|                   KEYWORDS NAME                   |
++---------------------------------------------------+
+|           Input Text After It Is Visible          |
+|            Get Text After It Is Visible           |
+|                       Logoff                      |
+|           Press Key After It Is Visible           |
+|                     Hover Tab                     |
+|                     Click Tab                     |
+|          Select Frame After It Is Visible         |
+|           Mouse Over After It Is Visible          |
+| Items List::Wait Until Items List Page Is Visible |
+|          Click Button After It Is Visible         |
+|                       Login                       |
+|               On The Items List Page              |
+|         Input Password After It Is Visible        |
++---------------------------------------------------+
+

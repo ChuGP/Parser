@@ -1,0 +1,35 @@
+
+NEW KEYWORDS AND REUSE TIMES :
++------------------------------------------------------------------------------------+-------------+
+|                                   KEY WORDS NAME                                   | REUSE TIMES |
++------------------------------------------------------------------------------------+-------------+
+|           Configuration Tab Is Added For Supporting Required Item Fields           |      3      |
+|                           Configuration Tab Should Exist                           |      2      |
+|                            Items List::Click Detail Tab                            |      2      |
+|                          Configuration Panel Should Exist                          |      2      |
+| Configuration Panel In Rackable Or Blade Server Item Should Contain Type Of Fields |      1      |
+|                      Items List::Dropdown Field Should Exist                       |      4      |
+|                        Items List::Input Field Should Exist                        |      10     |
+|                      Items List::Textarea Field Should Exist                       |      2      |
+|            Configuration Panel In VM Item Should Contain Type Of Fields            |      1      |
++------------------------------------------------------------------------------------+-------------+
+
+OLD KEYWORDS AND REUSE TIMES :
++---------------------------------------------------+-------------+
+|                   KEY WORDS NAME                  | REUSE TIMES |
++---------------------------------------------------+-------------+
+|               On The Items List Page              |      3      |
+|                       Login                       |      3      |
+|                     Click Tab                     |      3      |
+|                     Hover Tab                     |      3      |
+| Items List::Wait Until Items List Page Is Visible |      7      |
+|            Set Column Filter Conditions           |      5      |
+|                   Select Column                   |      9      |
+|              Select Filter Conditions             |      5      |
+|               Click Filter Condition              |      5      |
+|                       Logoff                      |      3      |
+|          Open The First Item In Edit Mode         |      2      |
+|                Select Item By Index               |      2      |
+|          Items List::Click ToolBar Button         |      2      |
+|       Items List::Wait Until Item Is Opened       |      2      |
++---------------------------------------------------+-------------+

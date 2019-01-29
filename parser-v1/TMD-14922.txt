@@ -1,0 +1,703 @@
+
+KEYWORDS AND REUSE TIMES :
+Login : 209
+Hover Tab : 273
+Submenu Should Display In This Order : 6
+Logoff : 200
+Click Item Of Assets Menu : 25
+Items List::Wait Until Items List Page Is Visible : 331
+Wait Until Add An Item Page Is Visible : 10
+Wait Until File Import Page Is Visible : 9
+Click Tab : 239
+On The Items List Page : 189
+Open A Few Items And A New Item Tab : 2
+Open Items In View Mode By Index : 7
+Items List::Get Name Colnums By Index : 13
+Get Texts In Asset Frame : 29
+Get Texts : 29
+Get Elements : 29
+Multiselect Names : 10
+Click Toolbar Button : 13
+Items List::Wait Until Item Is Opened : 43
+Add A New Item : 6
+Add A New Item Without Waiting : 6
+Wait A New Item Page Is Visible : 6
+Get Tabs Bar Item Texts : 19
+Items List::Switch Tab : 12
+Items List::Click Back To List : 4
+Items List::Close Tab : 16
+A Warning Dialog Should Be Visible : 1
+Click Close All Button : 5
+All Tabs Should Be Closed : 2
+Tabs Bar Items Should Display In This Order : 8
+Items List::Back To List : 3
+Open Items In Edit Mode By Index : 3
+Items List::Input Item Name : 12
+The Gumball Should Be Red : 2
+There Is A Warning For Closing Unsaved Item : 3
+Click Ok Button To Close All Tabs : 2
+Items List::Warning Dialog::Click Yes : 2
+Click Cancel Button And Should Return To Items View : 1
+Click Cancel Button To Return To Items View : 1
+Items List::Warning Dialog::Click No : 1
+Page Should Return To Items View : 1
+Text Of Tool Bar Buttons Should Display In This Order : 2
+Shrink The Browser To Width Which Cannot Contain All The Buttons : 2
+Search Name : 2
+Vertical Scroll Bar Of Items List Should Disappear : 2
+Horizontal Scroll Bar Of Items List Should Appear : 2
+Horizontal Scroll Bar Should Disappear After Shrinking All Columns : 2
+Shrink All Columns : 2
+Horizontal Scroll Bar Of Items List Should Disappear : 2
+Bottom Bar Should Displays Rows 1 - ${X} Of The ${Y} Items : 5
+Search Location : 7
+Search : 7
+On The Items List Page And Search SITE C And SITE A : 2
+Items List::Open Show/Hide Columns Menu : 65
+Close Browser And Delete User : 25
+Search With "Clearance" : 2
+Show/Hide Columns Menu::Save : 48
+Show/Hide Columns Menu::Click Apply : 48
+Show/Hide Columns Menu::Click Field : 202
+Show/Hide Columns Menu::Get Unmarked Standard Fields : 1
+Show/Hide Columns Menu::Get Marked Standard Fields : 1
+The Unmarked Fields Should Be Disappear As Columns In The Grid : 24
+Append To Custom Field List : 39
+HTTP Request::Create 13 Custom Fields Of All Types : 2
+Create One For Each Class Via Http Request : 2
+Create One For All Classes Via Http Request : 2
+Create One For 2 Classes Via Http Request : 2
+Create One For 9 Classes Via Http Request : 2
+Refresh Show/Hide Columns Menu : 16
+Get Unmarked Custom Fields : 5
+Click On The Cancel Button : 3
+The Menu Is Closed And User Is Returned To The List : 2
+Click On The X Button : 3
+Store Text Of All Existing Fields And Its Subclass : 4
+Get Text Of All Existing Fields And Its Subclass : 80
+Search Results Should Match Any Part Of Name : 75
+Get Current Search String : 75
+Search With "clearance" : 1
+Search With "Group" : 1
+Search With "Nothing" : 1
+Search With "${specialCharacters}" : 72
+Filter The Items From Site C Only : 4
+Filter The Items By Location: "SITE C" : 4
+Wait Until Items List Is Shown : 23
+Bottom Bar Should Displays Rows 1 - ${expectedNumberOfRows} Of The ${expectedNumberOfRows} Items : 1
+Scroll To Top : 8
+Scroll Down : 40
+Items List::Column Action : 14
+Items List::Click Column Action : 14
+Scroll Down 5 Times And Verify Cells Of Columns Make|Name Should Be Asc|Asc : 1
+Scroll Down 5 Times And Verify Cells Of Columns Make|Name Should Be Des|Asc : 1
+Scroll Down 5 Times And Verify Cells Of Columns Cabinet|Make|Name Should Be Asc|Des|Asc : 1
+Scroll Down 5 Times And Verify Cells Of Columns Cabinet|Make|Name Should Be Des|Des|Asc : 1
+Scroll Down 5 Times And Verify Cells Of Columns Cabinet|Name Should Be Des|Asc : 1
+Select 10 Rows By Mouse Clicks + CTRL And SHIFT Buttons : 2
+Select A Range Of Items By Name : 3
+Select Multiple Discontinuous Items By Name : 2
+Click On The Button View : 2
+Click Action Menu Button : 7
+Wait The Item Is Opened : 3
+Click On The Button Edit : 1
+Items List::Close All Tabs : 6
+Items List::Get Opened Tabs : 6
+Move The Column Name To Leftmost : 1
+Filter The Items By Status: "Planned" : 8
+The Toolbar Button Should Be Enabled : 1
+Filter The Items By Status: "Installed" : 2
+Select Item By Name : 20
+Verify Delete Button Is Disabled : 8
+Filter The Items By Status: "Storage" : 1
+Filter The Items By Status: "Powered-off" : 1
+Filter The Items By Status: "Archived" : 1
+Filter The Items By Status: "Off-Site" : 1
+Filter The Items By Status: "Planned Decomm." : 1
+Filter The Items By Name: "${item}" : 1
+Filter The Items By : 3
+Go To The Floor Maps Page : 4
+Click On The Button Floor Maps : 4
+Wait Until Floor Maps Page Is Visible : 4
+The Map And Its Elevation Picture Shown : 3
+Filter The Items By Names : 3
+The Floor Maps Button Should Be Disabled : 2
+The Floor Maps View Should Be Opened : 1
+Filter The Items By Name: "10" : 1
+Select An Item : 5
+Click On The Permissions Button : 2
+The Permissions Windows Should Be Opened : 2
+Items List::The Toolbar Button Should Be Disabled : 4
+Verify Add Item, Edit, Delete, Clone, Permissions Buttons Are Disabled : 3
+Select An Non-Planned Item : 3
+Select A Planned Item : 3
+Verify All Buttons Are Enabled : 2
+Models Library::Wait Until Page Is Visible : 1
+Items List::Open Add An Item Page : 57
+Items List::Click Add An Item Button : 58
+Items List::Wait Until Add An Item Page Is Opened : 57
+Select CPI In Make : 1
+Delete Automation Location : 3
+Select Raritan In Make : 1
+Open Browser And Add An Automation Location : 3
+Open Browser And Login : 5
+Login As ${role} : 5
+Wait Until DcTrack Loading Image Disappear : 5
+Go To Capacity : 5
+Click Capacity Tab : 5
+Wait Until Capacity Page Is Visible : 5
+Select SITE A And AUTOMATION Site In Search In : 5
+Select Model In Specify By : 5
+Select 911 Enable In Make : 5
+Select EGW In Model : 5
+Input 1 In RU Height : 5
+Input 3 In Quantity Per Cabinet : 2
+Click Search For Cabinet Button : 5
+Sort Search Result By Cabinet Name Descending : 2
+Click Assets Tab : 1
+Filter The Items By Name: "CAPACITY-SEARCH^^" : 1
+Input 1 In Quantity Per Cabinet : 3
+Open Browser And Add An Automation Location And Cabinet : 2
+Delete Automation Cabinet : 2
+Input Automation Reserve In Reservation Name : 1
+Input Automation Testing In Reservation Purpose : 1
+Select 05/19/2018 In Expiration Date : 1
+Click Save Button : 1
+Open Reservations List : 1
+An Issued Request In Requests List : 5
+Select A Planned Item Can Be Install : 5
+Filter The Items By U Position: ">= 1" : 5
+Install Item Request : 5
+Click Actions Button : 5
+Click Install Item Request Option : 5
+Wait Until Request Is Issued : 5
+Wait Until Dialog Animation Is Finished : 5
+Click Yes Button Of Item Request Dialog : 5
+Close Item Request Modal Dialog : 5
+Filter Requests By Request Stage : 12
+Filter Requests By Request Number : 12
+Open The Request In View Mode : 7
+Click View Button : 11
+Wait Until The Request Is Opened : 11
+Perform The Action : 18
+Wait Until Action Complete : 17
+Close Request Progress Modal Dialog : 17
+Verify The Request Has Been Rejected : 1
+Close Current Tab : 18
+Clear Search : 17
+Wait Until List Is Reloaded : 22
+Wait Until The Search Bar Is Ready : 17
+Verify The Request Has Been Reissued : 1
+Approve The Request : 4
+Verify The Request Has Been Approved : 5
+Create A Work Order For The Approved Request : 4
+Open The Approved Request : 4
+Create Work Order : 4
+Verify The Work Order Has Been Created : 4
+Filter Work Orders By Work Order Status : 10
+Filter Work Orders By Work Order Number : 10
+Approve An Issued Request : 3
+Issue The Work Order : 3
+Open Work Order In Edit Mode : 6
+Click Edit Button : 6
+Wait Until The Work Order Is Opened : 6
+Assign Notification To The First Person Of List : 3
+Click Refresh Button : 5
+Issue Work Order : 3
+Verify The Work Order Has Been Issued : 3
+Filter The Items By Name: "${toBeInstalledItemName}" : 2
+Cancel The Request : 2
+Verify The Request Has Been Cancelled : 1
+Verify The Item Is Still Planned : 1
+Cancel The Work Order : 2
+Cancel Work Order : 2
+Verify The Work Order Has Been Cancelled : 2
+Apply "Plan To Decommission" Setting In DcTrack Settings Page : 2
+Apply Plan To Decommissions : 2
+Select An Installed Item For Plan To Decomm : 2
+Select "Plan To Decommission Item Request" In Actions Menu : 1
+Click Plan To Decommision Item Request In Actions Menu : 1
+Select Date : 2
+Submit The Request : 1
+Create A New Item : 1
+Click Add An Item Button : 1
+Input Item Name : 1
+Verify The U Position Is Occupied By The Item Plan To Decomm : 1
+Select The Day After Date Plan To Decomm : 1
+Choose The Month : 1
+Choose The Day : 1
+Wait Until The Item Is Removed From The Cabinet : 1
+Verify The U Position Is Available : 1
+Select The U Position And Save The New Item : 1
+Items List::Save Item : 3
+Items List::Click Save Button : 17
+Items List::Fill In Detail Field : 3
+Is Field Enabled : 3
+Is Dropdown Field : 3
+Select Dropdown Content : 8
+Items List::Wait Until Item Bullet Is Green : 12
+Open An Item With Edit Mode : 22
+Items List::Select Item By Name : 31
+Items List::Click ToolBar Button : 32
+Open Sub-tab : 17
+Input Text In Subtab Field : 17
+Verify The Item Is Saved : 9
+Subtab Field Text Should Be Equal To : 7
+Verify There Is A Red Border Surrounding The Modified Field : 4
+The Border Color Of Modified Field Is Turned To Red : 4
+Verify The Warning Dialog : 4
+Capacity::Wait Until Page Is Visible : 1
+Enter The Searching Text In Specific Column : 4
+All Data In Column Should Contain Text : 2
+Open Item Which Is In Cabinet By Mounting Type : 2
+Get Input Text By Field Name : 3
+Click Hyperlink By Field Name : 3
+Verify Item Is Opened Correctly : 3
+Input Required Fields In Item Detail Page : 3
+Select Make : 10
+Open The First Item In Edit Mode : 1
+Select Item By Index : 1
+Filtering Column By Conditions : 8
+Set Column Filter Conditions : 8
+Select Column : 16
+Select Filter Conditions : 8
+Click Filter Condition : 14
+Given Create A New Device Named "Item Test" : 1
+Create A New Device : 1
+Select Make And Model : 1
+Add Viewer User Account : 2
+Delete Viewer Account : 2
+Double Click : 6
+Items List::Close The Current Item Tab : 5
+Input Dropdown Field And Press Enter : 84
+Input Field Content : 3
+Is Warning Dialog Shown : 2
+Value Of Field Should Be : 5
+Create A New Blade Device : 4
+Select Model : 1
+Click On The Items One By One And Open The Correct Page/View : 1
+Click On The Items Randomly And Open The Correct Page/View : 1
+Check Options In The Menu Are Available With Roles : 6
+Opetions Of Assets Menu Should Display In This Order : 5
+Top Row Should Contain Title Asset Management : 1
+Below The Title Should Contain Views Button : 1
+The Right Of Views Button Should Be Tabs For Opened Items : 1
+Verify The Function Of Switching Between Item Tabs And Backing To List View Is Correct : 1
+Verify The Function Of Switching Between Item Tabs Is Correct : 1
+Verify The Function Of Backing To List View Is Correct : 1
+Verify Current Page Is Items List : 1
+Randomly Close Tab And Verify That The Remaining Ones On The Right Of It Shift To Fill The Deleted One : 1
+Tab Texts Should Be Equal To : 6
+Make Some Change : 2
+A Warning Dialog Should Not Be Visible : 1
+Open Several Tabs In View Mode : 1
+Close All Button Should Be In The Far Right Of The Tabs Row : 1
+Open Several Tabs In View Mode And 1 In Edit Mode : 1
+Make Changes In The Edited Item Without Saving : 1
+The Unsaved Item Should Not Be Changed : 1
+Open Several Tabs In View Mode And 3 In Edit Mode : 2
+Make Changes In The Edited Items Without Saving : 2
+Unsaved Items Should Not Be Closed : 1
+The Unsaved Items Should Not Be Changed : 1
+Open Several Tabs In View Mode And 1 New Item : 1
+The Tabs Should Be Closed Without Warning : 1
+Warning Should Not Visible : 1
+Wait Until Tool Bar Buttons Are Shrinked : 1
+Icon Of Tool Bar Buttons Should Display In This Order : 1
+Tooltip Of Tool Bar Buttons Should Display In This Order : 2
+Select Items With Name Starting With "ESXI" : 1
+Select Items With Name Starting With "NJESX" : 1
+Initial Original Window Size : 1
+Select All Items In SITE C : 1
+Select All Items In SITE A : 1
+Move The Scroll Down Until You Pass Row 100 : 1
+Title Should Be Show/Hide Columns : 1
+There Should Be A Tooltip With The Title Showing On Mouse Over The Button : 1
+Set Window Size To : 1
+The Menu Window Should Be In The Available Space : 2
+Store The Menu Window Size : 1
+The Menu Window Should Be Expanded : 1
+Horizontal Scroll Bar Should Disappear In Show Hide Menu : 1
+Vertical Scroll Bar Should Disappear In Show Hide Menu : 1
+Show/Hide Columns Menu Should Includes Submenus : 1
+Verify The Default Marked Settings : 1
+Marked Settings Should Be : 11
+The Marked Settings Should Be Visible As Columns In The Grid : 1
+The Hard-coded Fields Should Be Displayed Grayed Out And Unchangeable : 1
+The Hard-coded Fields Should Be Displayed Grayed Out : 1
+The Hard-coded Fields Should Be Unchangeable : 1
+Field Should Be Unchangeable : 5
+Is Field Marked : 10
+Should Have Available Fileds : 11
+Randomly Mark One Field : 1
+Randomly Get One Unmarked Field : 1
+The Marked Field Should Be Appear As Columns In The Grid : 1
+Randomly Unmark One Field : 1
+Randomly Get One Marked Field : 1
+The Unmarked Field Should Be Disappear As Columns In The Grid : 1
+Mark All Fields : 1
+The Marked Fields Should Be Appears As Columns In The Grid : 1
+Unmark All Fields : 1
+Create 13 Custom Fields Of All Types : 1
+Go To Custom Field Headings : 1
+Create One For Each Class : 1
+Create Custom Field : 13
+Standard And Custom Fields::Click Create Button : 13
+Standard And Custom Fields::Input Label Name : 13
+Select Class : 31
+Select Type : 13
+Save Custom Field : 13
+Wait Until The Field Is Created : 16
+Create One For All Classes : 1
+Create One For 2 Classes : 1
+Create One For 9 Classes : 1
+Verify That The Correct Custom Field Are Available For Selection For Each Class : 1
+Custom Fields Are Available For Selection : 1
+Initial All Fields : 1
+The Custom Field Should Be Shown In Correct SubMenus : 13
+Field Should Be Shown ${expectedCustomField} In SubMenu ${subMenu} : 22
+Field Should Not Be Shown ${expectedCustomField} In SubMenu ${subMenu} : 121
+Mark All Of The Custom Fields : 1
+Ckeck All Custom Fields : 1
+The Marked Custom Fields Should Be Appears As Columns In The Grid : 1
+Unmark Custom Field One By One And Verify That Their Columns Disappear From The Grid : 1
+Get Marked Custom Fields : 1
+Show/Hide Columns Menu::Cancel : 1
+Mark Some Of The Custom Fields : 1
+Delete Custom Field One By One And Verify That Their Entries Disappear From The Show/Hide Menu And Grid : 1
+Click Custom Field Headings : 13
+Delete Custom Field : 13
+Unselect All Selected Field Row : 13
+The Deleted Custom Field Should Be Disappear In The Show/Hide Menu : 13
+Show/Hide Columns Menu Should Not Includes Fields : 13
+The Column ${customField.fieldName} Was Set To Be Visible : 13
+The Deleted Custom Field Should Be Disappear In The Grid : 8
+Do Some Changes In The Selection : 4
+There Is A Warning That There Are Unsaved Changes : 4
+Search Results Should Be Empty : 1
+Create Several Custom Fields Which Name Contain Special Characters : 1
+Create Custom Field Which Name Contain "\&?'!#$%()" : 1
+Create Custom Field Which Name Contain "*+,-./:;<=" : 1
+Create Custom Field Which Name Contain ">@[]]_`{|}" : 1
+Create Custom Field Which Name Contain "~¡¢£¤¥¦§" : 1
+Create Custom Field Which Name Contain "©ª«¬® °±²" : 1
+Create Custom Field Which Name Contain "³ μ¶· ̧¹º" : 1
+Create Custom Field Which Name Contain "»¼½¾¿" : 1
+Search With The Special Characters "\&?'!#$%()" : 1
+Search With The Special Characters "*+,-./:;<=" : 1
+Search With The Special Characters ">@[]]_`{|}" : 1
+Search With The Special Characters "~¡¢£¤¥¦§" : 1
+Search With The Special Characters "©ª«¬® °±²" : 1
+Search With The Special Characters "³ μ¶· ̧¹º" : 1
+Search With The Special Characters "»¼½¾¿" : 1
+Search With The Special Characters "&" : 1
+Search With The Special Characters "?" : 1
+Search With The Special Characters "'" : 1
+Search With The Special Characters "\" : 1
+Search With The Special Characters "" : 1
+Search With The Special Characters "#" : 1
+Search With The Special Characters "$" : 1
+Search With The Special Characters "%" : 1
+Search With The Special Characters "(" : 1
+Search With The Special Characters ")" : 1
+Search With The Special Characters "*" : 1
+Search With The Special Characters "+" : 1
+Search With The Special Characters "," : 1
+Search With The Special Characters "-" : 1
+Search With The Special Characters "." : 1
+Search With The Special Characters "/" : 1
+Search With The Special Characters ":" : 1
+Search With The Special Characters ";" : 1
+Search With The Special Characters "<" : 1
+Search With The Special Characters "=" : 1
+Search With The Special Characters ">" : 1
+Search With The Special Characters "@" : 1
+Search With The Special Characters "[" : 1
+Search With The Special Characters "]" : 1
+Search With The Special Characters "_" : 1
+Search With The Special Characters "`" : 1
+Search With The Special Characters "{" : 1
+Search With The Special Characters "|" : 1
+Search With The Special Characters "}" : 1
+Search With The Special Characters "~" : 1
+Search With The Special Characters "" : 1
+Search With The Special Characters "" : 1
+Search With The Special Characters "¡" : 1
+Search With The Special Characters "¢" : 1
+Search With The Special Characters "£" : 1
+Search With The Special Characters "¤" : 1
+Search With The Special Characters "¥" : 1
+Search With The Special Characters "¦" : 1
+Search With The Special Characters "§" : 1
+Search With The Special Characters "©" : 1
+Search With The Special Characters "ª" : 1
+Search With The Special Characters "«" : 1
+Search With The Special Characters "¬" : 1
+Search With The Special Characters "®" : 1
+Search With The Special Characters "" : 1
+Search With The Special Characters "°" : 1
+Search With The Special Characters "±" : 1
+Search With The Special Characters "²" : 1
+Search With The Special Characters "³" : 1
+Search With The Special Characters "" : 1
+Search With The Special Characters "μ" : 1
+Search With The Special Characters "¶" : 1
+Search With The Special Characters "·" : 1
+Search With The Special Characters "̧" : 1
+Search With The Special Characters "¹" : 1
+Search With The Special Characters "º" : 1
+Search With The Special Characters "»" : 1
+Search With The Special Characters "¼" : 1
+Search With The Special Characters "½" : 1
+Search With The Special Characters "¾" : 1
+Search With The Special Characters "¿" : 1
+Search With The Special Characters "" : 1
+Search With The Special Characters "" : 1
+Search With The Special Characters "" : 1
+Search With The Special Characters "" : 1
+Search With The String "name" : 1
+One Of The Custom Fields In Demo DB Should Match It As Well As The Standard Field Name : 1
+Go Trough The Radio Button Option And Verify That They Filter The Results Correctly : 1
+Go Trough The Radio Button Option Of Standard Fields : 1
+Verify That They Filter The Result Correctly : 2
+Get Filtered Results Of ${fieldType} Through RESTful API : 2
+Filter Results By : 2
+Go Trough The Radio Button Option Of Custom Fields : 1
+Verify The Number Of Given Rows : 1
+Number Of Rows Should Be ${names.__len__()} : 1
+Number Of Rows Of Items List Should Be ${expectedNumberOfRows} : 1
+Number Of All Items Should Be : 1
+Verify Sorting By Name Ascending : 2
+Scroll Down 5 Times And Verify Cells Of Column Name Should Be Ascending : 2
+Visible Cells Of Column Name Should Be Ascending : 12
+Verify Sorting By Name Descending : 1
+Scroll Down 5 Times And Verify Cells Of Column Name Should Be Descending : 1
+Visible Cells Of Column Name Should Be Descending : 6
+Verify Sorting By Make Ascending And Name Ascending : 1
+Verify Sorting By Make Descending And Name Ascending : 1
+Verify Sorting By Cabinet Ascending And Make Descending And Name Ascending : 1
+Verify Sorting By Cabinet Descending And Make Descending And Name Ascending : 1
+Disable Sorting For Column Make : 1
+Disable Sorting : 1
+Verify Sorting By Cabinet Descending And Name Ascending : 1
+Verify Column Make Is On Left Of Column Name : 1
+Verify Column Name Is On Left Of Column Make : 1
+Verify The Columns Are Separated From The Rest Of The Grid With A Thinker Line : 1
+Column Location And Column Subclass Stay Always Visible : 1
+Hide Column In The Grid : 1
+Show/Hide Columns Menu::Unmark Field : 1
+Show Column In The Grid : 2
+Show/Hide Columns Menu::Mark Field : 2
+All 10 Items Are Opened In View Mode : 1
+Item Should Be Opened In View Mode : 10
+All 10 Items Should Be Opened In Edit Mode : 1
+Item Should Be Opened In Edit Mode : 10
+Select Top 11 Items : 1
+The Edit Button And View Button Should Be Disabled : 1
+Clicking On The Edit Button And View Button Does Nothing : 1
+Click View Button Does Nothing : 1
+Click The View Button : 1
+Click Edit Button Does Nothing : 1
+Click The Edit Button : 1
+Verify The Button Add Is Visible And Work From List View : 1
+Button Add Should Be Visible : 3
+Wait Until Item Are Opened : 5
+New Item Details View Should Be Opened : 3
+Verify The Button Add Is Visible And Work From Item Details View : 1
+Open First Item From List View : 1
+Open Item In View Mode : 1
+Verify The Button Add Is Visible And Work From New Item Details View : 1
+Select 11 Planned Items With No Connected Ports : 1
+Select 1 Item By Status And Verify Delete Button Is Disable If The Item Is Exist : 6
+Search Name Of Item By : 6
+Select A Planned Item With Connected Ports : 1
+Click The Delete Button : 1
+Confirm The Wrong Dialog : 1
+There Should Be A Error Message : 1
+The Item Should Not Be Deleted : 1
+Select A Cabinet Item : 1
+Select A Device Item : 1
+The Map And Its Elevation Picture Shown With The Device Marked With Red Arrows : 1
+Select A Blade Item : 1
+Select 2 Items In The Same Location, Not Cabinets : 1
+Select 2 Cabinets In Different Locations : 1
+Select 2 Cabinets In The Same Location : 1
+The Floor Maps View Should Be Opened With Nothing Selected In The List : 1
+Nothing Selected In The List : 1
+Filter Some Items Via The Search Bar : 1
+Press The Export Button : 1
+Verify The Dropdown Menu With Options : 1
+Select An Non-Planned And Non-Planned Rack PDU Item : 1
+Select A Rack PDU Item : 1
+Verify Edit Button Is Enabled For RPDUs : 1
+Select A Planned Rack PDU Item : 1
+Verify Delete Button Is Enabled For Planned RPDUs : 1
+Verify Permission And Delete Buttons Are Disabled : 1
+Verify Delete Button Is Enabled : 1
+Verify Permission Button Is Disabled : 1
+Go To Models Library : 1
+Wait Until Models Library Page Is Visible : 4
+Open The First Three Models In The List Separately : 1
+Get Models Name By Index : 1
+Get Text Of Elements : 1
+Open Each Model In View Mode : 1
+Selec Model : 3
+Wait Until Model Is Opened : 3
+Back To List : 3
+Click Back To List : 3
+Close Each Of Them : 1
+User starts to add a new item : 1
+User selects the make: "CPI" : 1
+User can select the model named: "RIM-600 Host" without any unexpected error : 1
+Add A Cabinet : 1
+Delete Automation Cabinet And Automation Device : 1
+Go To Settings -> Locations : 1
+Add A Location : 1
+Click Add A Location Button : 1
+Input Automation SITE In Location Code : 1
+Input Automation SITE A In Location Name : 1
+Select Data Center In Level In Hierarchy : 1
+Select Main In Location Type : 1
+Select Can Contain Assets Checkbox : 1
+Select United States In Country : 1
+Input 400 Conttontail In Street : 1
+Input 1 In Street(Line2) : 1
+Input Somerset In City : 1
+Input 08873 In Postal Code : 1
+Select Dimension Sub-tab : 1
+Input 3500 In Location Area(Sq Ft) : 1
+Select Settings Sub-tab : 1
+Deselect Enable Virtual Power Chain Checkbox : 1
+Deselect System Default Location Checkbox : 1
+Click Save Button In Locations : 1
+Verify Automation SITE A Is Listed In Settings -> Locations : 1
+Add A Rack PDU : 1
+Delete Automation Cabinet And Automation Rack PDU : 1
+Search For Cabinet : 5
+Select 3B, 3E, And 3H In Search Results : 1
+Place All Selected Cabinets : 1
+Click Place All Button : 1
+Click Done Button In Edit Item Names : 1
+Verify There Are 9 CAPACITY-SEARCH^^ Items In Items List : 1
+Select 4D In Search Results : 1
+Delete Item Automation Place : 1
+Select 2B, 2C And 2D In Search Results : 1
+Select 2A In Search Results : 1
+Reserve The Selected Cabinet : 1
+Click Reserve Button : 1
+Select AUTOMATION SITE In Location : 1
+Select AUTOMATION CABINET In Cabinet : 1
+Select 40 In U Position : 1
+Wait Until Window Is Closed : 1
+Verify Automation Reserve Is In The Reservation List : 1
+Verify Search Results Is Correct : 1
+Reject An Issued Request : 1
+Reject The Request : 1
+Resubmit An Issued Request : 1
+Resubmit The Request : 1
+Approve An Reissued Request : 1
+Complete The Work Order : 1
+Mark Work Order As Complete : 1
+Verify The Work Order Is Complete : 1
+Verify The Item Has Been Installed : 1
+Check The Request In View Mode : 1
+Back To Request Page And Verify The Request Is Approved : 1
+Back To Request Page And Cancel The Request : 1
+Do The Action "Plan To Decommission Item Request" : 1
+Select A "Plan To Decomm" Date In Item Request Dialog : 1
+Select An Installed Item For Plan To Decomm And Open In Edit Mode : 1
+Open Item In Edit Mode : 1
+Plan To Decommission The Item By Changing Its Status Directly : 1
+Select A "Plan To Decomm" Date In Item Request Dialog That Triggered By Status Changing : 1
+Submit The Request And Wait The Item Status Changes to "Planned Decomm." : 1
+Verify The Input Of Contract Amount Is Valid : 5
+Verfiy The Input Of Contract Amount Is Invalid : 2
+Verify Maximum Number Of Characters Of Contract Amount Is Eight : 2
+Search Cabinet By Conditions : 1
+Input Search Informations : 1
+Capacity::Fill In Field : 9
+Capacity::Wait Until Page Contain Field : 9
+Capacity::Is Dropdown Field : 9
+Capacity::Select Dropdown Content : 1
+Capacity::Input Dropdown Field And Press Enter : 5
+Capacity::Input Field Content : 3
+Set Option To Guarantee Cabinet Can Be Searched : 1
+Set 4 Power Port Connect To Rack PDU : 1
+Capacity::Fill In Panel Field In List : 4
+Capacity::Click Button : 1
+Contents Of Power Ports Column Should Be Greater And Equal Than : 1
+Check The Column Has Dropdown Filter : 3
+Check The Column Has Text Filter : 2
+Select Multiple Columns By Index : 3
+Multiselect Items By Names : 3
+Back To Blade Item Detail : 1
+Create ZeroU NI : 1
+Create Multiple New Items And Enter All Required Fields : 1
+Check The Representation Of The Input : 2
+Get Columns Filter Results : 1
+Verify Item List Is Empty : 1
+Open The Specific Item In View Mode : 2
+Open Item Detail Page Of Planned Item In Edit Mode : 1
+Double Click Specific Item And Switch To Edit Mode : 3
+Double Click Item By Name : 5
+Verify The Fields Of Planned Item Which Can Be Edited In Top Row Are Enabled : 1
+All Fields In Specific Type Panel Should Be Editable : 7
+Open The Item Detail Page Of An Installed Non-Power-Outlet Item In Edit Mode : 1
+Double Click An Installed Non-Power-Outlet Item And Switch To Edit Mode : 1
+Verify The Fields Of Installed Non-Power-Outlet Item Can Be Edited : 1
+Open The Item Detail Page Of An Installed Power Outlet Item In Edit Mode : 1
+Double Click An Installed Power Outlet Item And Switch To Edit Mode : 1
+Verify The Fields Of Installed Power Outlet Item Can Be Edited : 1
+Open Item Detail Page Of Archived Item In Edit Mode : 1
+Verify The Fields Of Archived Item Which Can Be Edited In Top Row Are Enabled : 1
+Open Item Detail Page Of Storage Item In Edit Mode : 1
+Verify The Fields Of Storage Item Which Can Be Edited In Top Row Are Enabled : 1
+The Class Item Field Mounting Is ZeroU / Fixed And Placement Displays Depth, Side, And U Position Fields : 3
+Select Make And Model Which Has ZeroU : 3
+Only Models Related To The Selected "Make" Should Be Shown : 1
+Click Checkbox : 2
+Verify HW Info Selections Gets Blanked Out : 1
+Verify Field Text : 1
+Get Input Value : 3
+Verify Make/Model Is Reset : 1
+Verify The Field Should Be Visible : 1
+Verify Field Text Is Empty : 2
+Find Available Row Label, Position In Row, Location : 1
+Provide Serial Number, Asset Tag And EAsset Tag : 1
+Prepare The Item Information That Mounting Is Rackable And Rus Is 1 : 1
+Prepare Availalbe Placement Information By Model : 1
+Create And Edit An Item With Chosen Class And Verify Item Name Can Contain Special Character : 10
+Create An Item With Special Character And Specific Class : 10
+Delete An Item Which Created From This Test Case : 10
+Create An Item With Chosen Class And Verify Item Name Can't Forbidden Contain Special Character : 20
+Create An Item With Forbidden Character And Specific Class : 20
+Main Page Should Be Opened : 3
+Wait Until Enterprise Dashboard Page Is Visible : 3
+Verify The Available Of Asset Management From Tool Bar : 3
+Tab Name Should Be Visible : 3
+Menu Option Should Display In Pull Down Menu : 2
+Menu Option Should Not Display In Pull Down Menu : 1
+Verify The Input Of Purchase Price Is Valid : 5
+Verfiy The Input Of Purchase Price Is Invalid : 2
+Verify Maximum Number Of Characters Of Purchase Price Is Eight : 2
+Wait Until Field Management Page Is Visible : 1
+Select Field : 1
+Create An SLA Profile : 1
+Field Management::Click Create Button : 1
+Input Label Name : 1
+Save The Field Option : 1
+Close The Creating Toolbar : 1
+Verify The SLA Profile Is On The SLA Profile List : 1
+Modified SLA Profile : 1
+Cabinet Items Should Be Deleted In Roles : 2
+Create Item By Class : 2
+Edit Alias, Type, Function, Customer Fields Info Of Item And Save : 2
+Verify Values Are Changed And Saved : 1
+Find Available Blade Chassis That Is Not In The Default Location : 1
+Create Network Blade In Other Location And Place It In Front Faces Of Chassis : 1
+Mounting And Form Factor Of Blade Should Be Displayed Correctly : 10
+Find Available Blade Chassis In The Default Location : 1
+Create Network Blade In Default Location And Place It In Front Faces Of Chassis : 1
+Find An Available Blade Chassis : 2
+Create Network Blade And Place It In Front Face Of Chassis : 1
+Create Device Blade And Place It In Back Face Of Chassis : 1

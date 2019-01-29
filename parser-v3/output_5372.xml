@@ -1,0 +1,2402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1 (Python 3.6.5 on win32)" generated="20190116 21:39:29.613" rpa="false">
+<suite id="s1" name="Test Automation" source="C:\Users\DCTRACK\Desktop\test_automation">
+<suite id="s1-s1" name="Regression Test" source="C:\Users\DCTRACK\Desktop\test_automation\Regression Test">
+<suite id="s1-s1-s1" name="TMD-5372 EITC001 Configuration tab is added for supporting required item fields" source="C:\Users\DCTRACK\Desktop\test_automation\Regression Test\TMD-5372 EITC001 Configuration tab is added for supporting required item fields.robot">
+<test id="s1-s1-s1-t1" name="TMD-5372 EITC001 Configuration tab is added for supporting required item fields">
+<kw name="Configuration Tab Is Added For Supporting Required Item Fields">
+<arguments>
+<arg>class=Device</arg>
+<arg>mounting=Rackable</arg>
+</arguments>
+<kw name="On The Items List Page" library="DCTLibrary">
+<doc>Open browser and login dcTrack (default: _admin_) and enter the items list page.</doc>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${user}" != "${EMPTY}"</arg>
+<arg>Login</arg>
+<arg>&amp;{user}</arg>
+<arg>ELSE</arg>
+<arg>Login</arg>
+<arg>&amp;{administrator}</arg>
+</arguments>
+<kw name="Login" library="DCTLibrary">
+<doc>Prepare a dictionary variable as below:
+| =Variables= | =name= | =password= |
+| {'name': 'admin', 'password': 'sunbird'} | name=admin | password=xxx1234!!! |
+Usage:
+| Login | {'name': 'admin', 'password': 'sunbird'} |</doc>
+<arguments>
+<arg>&amp;{administrator}</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${headless}</arg>
+<arg>Open Headless Browser</arg>
+<arg>${dcTrackURL}</arg>
+<arg>${browser}</arg>
+<arg>ELSE</arg>
+<arg>Run Keywords</arg>
+<arg>Open Browser</arg>
+<arg>${dcTrackURL}</arg>
+<arg>${browser}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Open Browser</arg>
+<arg>${dcTrackURL}</arg>
+<arg>${browser}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${dcTrackURL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190116 21:39:29.933" level="INFO">Opening browser 'chrome' to base url 'https://140.124.181.93'.</msg>
+<status status="PASS" starttime="20190116 21:39:29.933" endtime="20190116 21:39:32.389"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190116 21:39:32.397" endtime="20190116 21:39:33.545"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:29.933" endtime="20190116 21:39:33.545"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:29.933" endtime="20190116 21:39:33.545"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='login']</arg>
+<arg>&amp;{account}[name]</arg>
+</arguments>
+<msg timestamp="20190116 21:39:33.545" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='login']'.</msg>
+<status status="PASS" starttime="20190116 21:39:33.545" endtime="20190116 21:39:33.645"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='password']</arg>
+<arg>&amp;{account}[password]</arg>
+</arguments>
+<msg timestamp="20190116 21:39:33.645" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20190116 21:39:33.645" endtime="20190116 21:39:33.726"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@value='Log in']</arg>
+</arguments>
+<msg timestamp="20190116 21:39:33.726" level="INFO">Clicking button 'xpath://input[@value='Log in']'.</msg>
+<status status="PASS" starttime="20190116 21:39:33.726" endtime="20190116 21:39:34.655"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://span[@class='app-spinner']</arg>
+<arg>timeout=1s</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://span[@class='app-spinner']</arg>
+<arg>timeout=1s</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:34.656" endtime="20190116 21:39:35.928"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:34.656" endtime="20190116 21:39:35.929"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` disappears from current page.</doc>
+<arguments>
+<arg>xpath://span[@class='app-spinner']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:35.929" endtime="20190116 21:39:36.005"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:29.933" endtime="20190116 21:39:36.006"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:29.933" endtime="20190116 21:39:36.006"></status>
+</kw>
+<kw name="Click Tab" library="DCTLibrary">
+<doc>Usage:
+| Click Tab | Assets |
+| Click Tab | Settings |
+| Click Tab | Assets | Items List |
+| Click Tab | Assets | File Import |
+| Click Tab | Settings | Locations |</doc>
+<arguments>
+<arg>Assets</arg>
+<arg>Items List</arg>
+</arguments>
+<kw name="Hover Tab" library="DCTLibrary">
+<doc>Hover with the mouse over the ``tabName`` tab menu</doc>
+<arguments>
+<arg>${tabName}</arg>
+</arguments>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath://*[text()='${tabName}']</arg>
+</arguments>
+<msg timestamp="20190116 21:39:36.008" level="INFO">Simulating Mouse Over on element 'xpath://*[text()='Assets']'.</msg>
+<status status="PASS" starttime="20190116 21:39:36.007" endtime="20190116 21:39:36.056"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[contains(@class, 'dropdown') and contains(@class, 'open')]//*[contains(@class,'dropdown')]</arg>
+<arg>timeout=${shortPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:36.057" endtime="20190116 21:39:36.503"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:36.007" endtime="20190116 21:39:36.503"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${itemName}"=="${EMPTY}"</arg>
+<arg>Click Element</arg>
+<arg>xpath://*[text()='${tabName}']</arg>
+<arg>ELSE</arg>
+<arg>Click Element</arg>
+<arg>xpath://*[text()='${itemName}']</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[text()='${itemName}']</arg>
+</arguments>
+<msg timestamp="20190116 21:39:36.504" level="INFO">Clicking element 'xpath://*[text()='Items List']'.</msg>
+<status status="PASS" starttime="20190116 21:39:36.504" endtime="20190116 21:39:37.109"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:36.504" endtime="20190116 21:39:37.110"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${tabName}' == 'Assets' and '${itemName}' == 'Items List'</arg>
+<arg>Items List::Wait Until Items List Page Is Visible</arg>
+</arguments>
+<kw name="Items List::Wait Until Items List Page Is Visible" library="DCTLibrary">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:39:37.123" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:39:37.122" endtime="20190116 21:39:39.176"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[@id='items-list']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>error=Current page is not items list</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:39.199" endtime="20190116 21:39:39.218"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[contains(@class, 'ui-grid-render-container-body')]//div[contains(@class, 'ui-grid-viewport')]//div[contains(@class, 'ui-grid-cell')]</arg>
+<arg>timeout=${longPeriodOfTime}</arg>
+<arg>error=Items list is not shown</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:39.219" endtime="20190116 21:39:39.386"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:39:39.386" endtime="20190116 21:39:39.389"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:37.121" endtime="20190116 21:39:39.389"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:37.118" endtime="20190116 21:39:39.389"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${tabName}' == 'Settings' and '${itemName}' == 'Models Library'</arg>
+<arg>Models Library::Wait Until Page Is Visible</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:39.390" endtime="20190116 21:39:39.390"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:36.006" endtime="20190116 21:39:39.390"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:29.933" endtime="20190116 21:39:39.391"></status>
+</kw>
+<kw name="Set Column Filter Conditions" library="Keywords">
+<arguments>
+<arg>Class</arg>
+<arg>${class}</arg>
+</arguments>
+<kw name="Select Column" library="Keywords">
+<arguments>
+<arg>${columnName}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:39:39.392" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:39:39.392" endtime="20190116 21:39:39.416"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), '${columnName}')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]</arg>
+</arguments>
+<msg timestamp="20190116 21:39:39.433" level="INFO">Clicking element 'xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), 'Class')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]'.</msg>
+<status status="PASS" starttime="20190116 21:39:39.432" endtime="20190116 21:39:44.647"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:39:44.647" endtime="20190116 21:39:44.647"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:39.391" endtime="20190116 21:39:44.647"></status>
+</kw>
+<kw name="Select Filter Conditions" library="Keywords">
+<arguments>
+<arg>${conditions}</arg>
+</arguments>
+<kw name="${condition} IN [ @{conditions} ]" type="for">
+<kw name="${condition} = Device" type="foritem">
+<kw name="Click Filter Condition" library="Keywords">
+<arguments>
+<arg>${condition}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:39:44.647" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:39:44.647" endtime="20190116 21:39:44.667"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'dropdown-menu')]//a[normalize-space()='${condition}']</arg>
+</arguments>
+<msg timestamp="20190116 21:39:44.677" level="INFO">Clicking element 'xpath://*[contains(@class,'dropdown-menu')]//a[normalize-space()='Device']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190116 21:39:45.228" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190116 21:39:44.744" endtime="20190116 21:39:45.228"></status>
+</kw>
+<msg timestamp="20190116 21:39:45.253" level="FAIL">ElementNotVisibleException: Message: element not visible
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" starttime="20190116 21:39:44.677" endtime="20190116 21:39:45.253"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:39:45.253" endtime="20190116 21:39:45.253"></status>
+</kw>
+<msg timestamp="20190116 21:39:45.574" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="FAIL" starttime="20190116 21:39:44.647" endtime="20190116 21:39:45.253"></status>
+</kw>
+<status status="FAIL" starttime="20190116 21:39:44.647" endtime="20190116 21:39:45.574"></status>
+</kw>
+<status status="FAIL" starttime="20190116 21:39:44.647" endtime="20190116 21:39:45.584"></status>
+</kw>
+<status status="FAIL" starttime="20190116 21:39:44.647" endtime="20190116 21:39:45.584"></status>
+</kw>
+<status status="FAIL" starttime="20190116 21:39:39.391" endtime="20190116 21:39:45.584"></status>
+</kw>
+<kw name="Logoff" library="DCTLibrary" type="teardown">
+<doc>Close Browser asynchronously</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190116 21:39:45.584" endtime="20190116 21:39:47.786"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:45.584" endtime="20190116 21:39:47.786"></status>
+</kw>
+<msg timestamp="20190116 21:39:47.786" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="FAIL" starttime="20190116 21:39:29.933" endtime="20190116 21:39:47.786"></status>
+</kw>
+<kw name="Configuration Tab Is Added For Supporting Required Item Fields">
+<arguments>
+<arg>class=Device</arg>
+<arg>subclass=Blade Server</arg>
+</arguments>
+<kw name="On The Items List Page" library="DCTLibrary">
+<doc>Open browser and login dcTrack (default: _admin_) and enter the items list page.</doc>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${user}" != "${EMPTY}"</arg>
+<arg>Login</arg>
+<arg>&amp;{user}</arg>
+<arg>ELSE</arg>
+<arg>Login</arg>
+<arg>&amp;{administrator}</arg>
+</arguments>
+<kw name="Login" library="DCTLibrary">
+<doc>Prepare a dictionary variable as below:
+| =Variables= | =name= | =password= |
+| {'name': 'admin', 'password': 'sunbird'} | name=admin | password=xxx1234!!! |
+Usage:
+| Login | {'name': 'admin', 'password': 'sunbird'} |</doc>
+<arguments>
+<arg>&amp;{administrator}</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${headless}</arg>
+<arg>Open Headless Browser</arg>
+<arg>${dcTrackURL}</arg>
+<arg>${browser}</arg>
+<arg>ELSE</arg>
+<arg>Run Keywords</arg>
+<arg>Open Browser</arg>
+<arg>${dcTrackURL}</arg>
+<arg>${browser}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Open Browser</arg>
+<arg>${dcTrackURL}</arg>
+<arg>${browser}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${dcTrackURL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190116 21:39:47.796" level="INFO">Opening browser 'chrome' to base url 'https://140.124.181.93'.</msg>
+<status status="PASS" starttime="20190116 21:39:47.796" endtime="20190116 21:39:50.534"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190116 21:39:50.541" endtime="20190116 21:39:51.666"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:47.796" endtime="20190116 21:39:51.666"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:47.796" endtime="20190116 21:39:51.666"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='login']</arg>
+<arg>&amp;{account}[name]</arg>
+</arguments>
+<msg timestamp="20190116 21:39:51.666" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='login']'.</msg>
+<status status="PASS" starttime="20190116 21:39:51.666" endtime="20190116 21:39:51.755"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='password']</arg>
+<arg>&amp;{account}[password]</arg>
+</arguments>
+<msg timestamp="20190116 21:39:51.756" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20190116 21:39:51.756" endtime="20190116 21:39:51.840"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@value='Log in']</arg>
+</arguments>
+<msg timestamp="20190116 21:39:51.841" level="INFO">Clicking button 'xpath://input[@value='Log in']'.</msg>
+<status status="PASS" starttime="20190116 21:39:51.840" endtime="20190116 21:39:52.777"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://span[@class='app-spinner']</arg>
+<arg>timeout=1s</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://span[@class='app-spinner']</arg>
+<arg>timeout=1s</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:52.780" endtime="20190116 21:39:54.056"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:52.778" endtime="20190116 21:39:54.057"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` disappears from current page.</doc>
+<arguments>
+<arg>xpath://span[@class='app-spinner']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:54.057" endtime="20190116 21:39:54.123"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:47.796" endtime="20190116 21:39:54.123"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:47.786" endtime="20190116 21:39:54.123"></status>
+</kw>
+<kw name="Click Tab" library="DCTLibrary">
+<doc>Usage:
+| Click Tab | Assets |
+| Click Tab | Settings |
+| Click Tab | Assets | Items List |
+| Click Tab | Assets | File Import |
+| Click Tab | Settings | Locations |</doc>
+<arguments>
+<arg>Assets</arg>
+<arg>Items List</arg>
+</arguments>
+<kw name="Hover Tab" library="DCTLibrary">
+<doc>Hover with the mouse over the ``tabName`` tab menu</doc>
+<arguments>
+<arg>${tabName}</arg>
+</arguments>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath://*[text()='${tabName}']</arg>
+</arguments>
+<msg timestamp="20190116 21:39:54.125" level="INFO">Simulating Mouse Over on element 'xpath://*[text()='Assets']'.</msg>
+<status status="PASS" starttime="20190116 21:39:54.125" endtime="20190116 21:39:54.177"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[contains(@class, 'dropdown') and contains(@class, 'open')]//*[contains(@class,'dropdown')]</arg>
+<arg>timeout=${shortPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:54.177" endtime="20190116 21:39:54.623"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:54.124" endtime="20190116 21:39:54.623"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${itemName}"=="${EMPTY}"</arg>
+<arg>Click Element</arg>
+<arg>xpath://*[text()='${tabName}']</arg>
+<arg>ELSE</arg>
+<arg>Click Element</arg>
+<arg>xpath://*[text()='${itemName}']</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[text()='${itemName}']</arg>
+</arguments>
+<msg timestamp="20190116 21:39:54.625" level="INFO">Clicking element 'xpath://*[text()='Items List']'.</msg>
+<status status="PASS" starttime="20190116 21:39:54.624" endtime="20190116 21:39:55.215"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:54.624" endtime="20190116 21:39:55.216"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${tabName}' == 'Assets' and '${itemName}' == 'Items List'</arg>
+<arg>Items List::Wait Until Items List Page Is Visible</arg>
+</arguments>
+<kw name="Items List::Wait Until Items List Page Is Visible" library="DCTLibrary">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:39:55.218" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:39:55.218" endtime="20190116 21:39:57.852"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[@id='items-list']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>error=Current page is not items list</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:57.870" endtime="20190116 21:39:57.886"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[contains(@class, 'ui-grid-render-container-body')]//div[contains(@class, 'ui-grid-viewport')]//div[contains(@class, 'ui-grid-cell')]</arg>
+<arg>timeout=${longPeriodOfTime}</arg>
+<arg>error=Items list is not shown</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:57.886" endtime="20190116 21:39:57.979"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:39:57.980" endtime="20190116 21:39:57.999"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:55.217" endtime="20190116 21:39:57.999"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:55.216" endtime="20190116 21:39:57.999"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${tabName}' == 'Settings' and '${itemName}' == 'Models Library'</arg>
+<arg>Models Library::Wait Until Page Is Visible</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:57.999" endtime="20190116 21:39:58.000"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:54.124" endtime="20190116 21:39:58.000"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:47.786" endtime="20190116 21:39:58.000"></status>
+</kw>
+<kw name="Set Column Filter Conditions" library="Keywords">
+<arguments>
+<arg>Class</arg>
+<arg>${class}</arg>
+</arguments>
+<kw name="Select Column" library="Keywords">
+<arguments>
+<arg>${columnName}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:39:58.002" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:39:58.001" endtime="20190116 21:39:58.021"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), '${columnName}')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]</arg>
+</arguments>
+<msg timestamp="20190116 21:39:58.038" level="INFO">Clicking element 'xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), 'Class')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]'.</msg>
+<status status="PASS" starttime="20190116 21:39:58.038" endtime="20190116 21:39:58.252"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:39:58.252" endtime="20190116 21:39:58.303"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:58.001" endtime="20190116 21:39:58.304"></status>
+</kw>
+<kw name="Select Filter Conditions" library="Keywords">
+<arguments>
+<arg>${conditions}</arg>
+</arguments>
+<kw name="${condition} IN [ @{conditions} ]" type="for">
+<kw name="${condition} = Device" type="foritem">
+<kw name="Click Filter Condition" library="Keywords">
+<arguments>
+<arg>${condition}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:39:58.307" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:39:58.306" endtime="20190116 21:39:58.348"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'dropdown-menu')]//a[normalize-space()='${condition}']</arg>
+</arguments>
+<msg timestamp="20190116 21:39:58.357" level="INFO">Clicking element 'xpath://*[contains(@class,'dropdown-menu')]//a[normalize-space()='Device']'.</msg>
+<status status="PASS" starttime="20190116 21:39:58.357" endtime="20190116 21:39:58.486"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${condition}' not in ['Check All', 'Uncheck All', 'Is Empty']</arg>
+<arg>Run Keywords</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://span[@class='text-success' and contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://span[@class='text-success']//*[contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://span[@class='text-success' and contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://span[@class='text-success']//*[contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://span[@class='text-success' and contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:58.488" endtime="20190116 21:39:59.970"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://span[@class='text-success']//*[contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:39:59.971" endtime="20190116 21:40:00.009"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:58.487" endtime="20190116 21:40:00.009"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:58.487" endtime="20190116 21:40:00.010"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:00.010" endtime="20190116 21:40:00.013"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:58.306" endtime="20190116 21:40:00.014"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:58.305" endtime="20190116 21:40:00.014"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:58.305" endtime="20190116 21:40:00.014"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:58.304" endtime="20190116 21:40:00.014"></status>
+</kw>
+<kw name="Select Column" library="Keywords">
+<arguments>
+<arg>${columnName}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:00.015" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:00.015" endtime="20190116 21:40:00.025"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), '${columnName}')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:00.035" level="INFO">Clicking element 'xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), 'Class')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]'.</msg>
+<status status="PASS" starttime="20190116 21:40:00.035" endtime="20190116 21:40:00.116"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:00.116" endtime="20190116 21:40:00.121"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:00.015" endtime="20190116 21:40:00.121"></status>
+</kw>
+<kw name="Items List::Wait Until Items List Page Is Visible" library="DCTLibrary">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:00.122" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:00.122" endtime="20190116 21:40:00.139"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[@id='items-list']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>error=Current page is not items list</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:00.141" endtime="20190116 21:40:00.151"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[contains(@class, 'ui-grid-render-container-body')]//div[contains(@class, 'ui-grid-viewport')]//div[contains(@class, 'ui-grid-cell')]</arg>
+<arg>timeout=${longPeriodOfTime}</arg>
+<arg>error=Items list is not shown</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:00.151" endtime="20190116 21:40:00.212"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:00.212" endtime="20190116 21:40:00.212"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:00.122" endtime="20190116 21:40:00.212"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:39:58.001" endtime="20190116 21:40:00.212"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${subclass}' != '${EMPTY}'</arg>
+<arg>Set Column Filter Conditions</arg>
+<arg>Subclass</arg>
+<arg>${subclass}</arg>
+<arg>ELSE</arg>
+<arg>Enter The Searching Text In Specific Column</arg>
+<arg>Mounting</arg>
+<arg>${mounting}</arg>
+</arguments>
+<kw name="Set Column Filter Conditions" library="Keywords">
+<arguments>
+<arg>Subclass</arg>
+<arg>${subclass}</arg>
+</arguments>
+<kw name="Select Column" library="Keywords">
+<arguments>
+<arg>${columnName}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:00.212" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:00.212" endtime="20190116 21:40:00.230"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), '${columnName}')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:00.240" level="INFO">Clicking element 'xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), 'Subclass')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]'.</msg>
+<status status="PASS" starttime="20190116 21:40:00.240" endtime="20190116 21:40:00.364"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:00.365" endtime="20190116 21:40:00.372"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:00.212" endtime="20190116 21:40:00.372"></status>
+</kw>
+<kw name="Select Filter Conditions" library="Keywords">
+<arguments>
+<arg>${conditions}</arg>
+</arguments>
+<kw name="${condition} IN [ @{conditions} ]" type="for">
+<kw name="${condition} = Blade Server" type="foritem">
+<kw name="Click Filter Condition" library="Keywords">
+<arguments>
+<arg>${condition}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:00.374" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:00.374" endtime="20190116 21:40:00.399"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'dropdown-menu')]//a[normalize-space()='${condition}']</arg>
+</arguments>
+<msg timestamp="20190116 21:40:00.408" level="INFO">Clicking element 'xpath://*[contains(@class,'dropdown-menu')]//a[normalize-space()='Blade Server']'.</msg>
+<status status="PASS" starttime="20190116 21:40:00.407" endtime="20190116 21:40:00.519"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${condition}' not in ['Check All', 'Uncheck All', 'Is Empty']</arg>
+<arg>Run Keywords</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://span[@class='text-success' and contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://span[@class='text-success']//*[contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://span[@class='text-success' and contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://span[@class='text-success']//*[contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://span[@class='text-success' and contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:00.520" endtime="20190116 21:40:01.948"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://span[@class='text-success']//*[contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:01.949" endtime="20190116 21:40:01.975"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:00.520" endtime="20190116 21:40:01.975"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:00.519" endtime="20190116 21:40:01.975"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:01.975" endtime="20190116 21:40:01.975"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:00.373" endtime="20190116 21:40:01.975"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:00.373" endtime="20190116 21:40:01.975"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:00.373" endtime="20190116 21:40:01.975"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:00.372" endtime="20190116 21:40:01.975"></status>
+</kw>
+<kw name="Select Column" library="Keywords">
+<arguments>
+<arg>${columnName}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:01.975" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:01.975" endtime="20190116 21:40:01.995"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), '${columnName}')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:02.015" level="INFO">Clicking element 'xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), 'Subclass')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]'.</msg>
+<status status="PASS" starttime="20190116 21:40:02.015" endtime="20190116 21:40:02.127"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:02.127" endtime="20190116 21:40:02.139"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:01.975" endtime="20190116 21:40:02.139"></status>
+</kw>
+<kw name="Items List::Wait Until Items List Page Is Visible" library="DCTLibrary">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:02.141" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:02.141" endtime="20190116 21:40:02.159"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[@id='items-list']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>error=Current page is not items list</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:02.159" endtime="20190116 21:40:02.169"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[contains(@class, 'ui-grid-render-container-body')]//div[contains(@class, 'ui-grid-viewport')]//div[contains(@class, 'ui-grid-cell')]</arg>
+<arg>timeout=${longPeriodOfTime}</arg>
+<arg>error=Items list is not shown</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:02.169" endtime="20190116 21:40:02.234"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:02.235" endtime="20190116 21:40:02.238"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:02.140" endtime="20190116 21:40:02.238"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:00.212" endtime="20190116 21:40:02.238"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:00.212" endtime="20190116 21:40:02.238"></status>
+</kw>
+<kw name="Open The First Item In Edit Mode" library="Keywords">
+<kw name="Select Item By Index" library="Keywords">
+<arguments>
+<arg>0</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:02.240" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:02.239" endtime="20190116 21:40:02.260"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:(//*[contains(@class, 'header-buttons') and contains(@class, 'ng-pristine')])[${index}+1]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:02.270" level="INFO">Clicking element 'xpath:(//*[contains(@class, 'header-buttons') and contains(@class, 'ng-pristine')])[0+1]'.</msg>
+<status status="PASS" starttime="20190116 21:40:02.270" endtime="20190116 21:40:02.388"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:02.389" endtime="20190116 21:40:02.394"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:02.239" endtime="20190116 21:40:02.395"></status>
+</kw>
+<kw name="Items List::Click ToolBar Button" library="Keywords">
+<arguments>
+<arg>Edit</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:02.396" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:02.395" endtime="20190116 21:40:02.419"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[contains(@class, 'active')]//button[normalize-space()='${buttonText}' and not(contains(@class, 'disabled'))]</arg>
+<arg>timeout=${shortPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:02.432" endtime="20190116 21:40:02.720"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[contains(@class, 'active')]//button[normalize-space()='${buttonText}' and not(contains(@class, 'disabled'))]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:02.720" level="INFO">Clicking button 'xpath://div[contains(@class, 'active')]//button[normalize-space()='Edit' and not(contains(@class, 'disabled'))]'.</msg>
+<status status="PASS" starttime="20190116 21:40:02.720" endtime="20190116 21:40:03.039"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:03.039" endtime="20190116 21:40:03.202"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:02.395" endtime="20190116 21:40:03.202"></status>
+</kw>
+<kw name="Items List::Wait Until Item Is Opened" library="DCTLibrary">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:03.204" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:03.203" endtime="20190116 21:40:03.236"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>"${item}" == "${EMPTY}"</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://li[contains(@class, 'list-detail-tabbar') and contains(@class, 'active') and normalize-space()='${item}']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:03.247" endtime="20190116 21:40:03.247"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[contains(@class, 'active')]//*[@id='identity_panel']//input[@id='tiName']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:03.247" endtime="20190116 21:40:04.562"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:04.563" endtime="20190116 21:40:04.566"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:03.203" endtime="20190116 21:40:04.566"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:02.239" endtime="20190116 21:40:04.566"></status>
+</kw>
+<kw name="Configuration Tab Should Exist">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:04.567" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:04.567" endtime="20190116 21:40:04.585"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://label[text()='Configuration']</arg>
+<arg>timeout=${shortPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:04.603" endtime="20190116 21:40:04.629"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:04.629" endtime="20190116 21:40:04.639"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:04.567" endtime="20190116 21:40:04.639"></status>
+</kw>
+<kw name="Items List::Click Detail Tab">
+<arguments>
+<arg>Configuration</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:04.639" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:04.639" endtime="20190116 21:40:04.649"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://label[text()='${tabName}']</arg>
+</arguments>
+<msg timestamp="20190116 21:40:04.697" level="INFO">Clicking element 'xpath://label[text()='Configuration']'.</msg>
+<status status="PASS" starttime="20190116 21:40:04.697" endtime="20190116 21:40:05.001"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:05.002" endtime="20190116 21:40:05.070"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:04.639" endtime="20190116 21:40:05.070"></status>
+</kw>
+<kw name="Configuration Panel Should Exist">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.072" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.071" endtime="20190116 21:40:05.090"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[@id='deviceConfig']</arg>
+<arg>timeout=${shortPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:05.105" endtime="20190116 21:40:05.167"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[@id='vmConfig']</arg>
+<arg>timeout=${shortPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:05.167" endtime="20190116 21:40:05.199"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:05.199" endtime="20190116 21:40:05.201"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:05.071" endtime="20190116 21:40:05.202"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${subclass}' == 'Virtual Machine'</arg>
+<arg>Configuration Panel In VM Item Should Contain Type Of Fields</arg>
+<arg>ELSE</arg>
+<arg>Configuration Panel In Rackable Or Blade Server Item Should Contain Type Of Fields</arg>
+</arguments>
+<kw name="Configuration Panel In Rackable Or Blade Server Item Should Contain Type Of Fields">
+<kw name="Items List::Dropdown Field Should Exist">
+<arguments>
+<arg>Operating System</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.203" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.203" endtime="20190116 21:40:05.219"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//div[contains(@class,'selectize-control')]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.242" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='Operating System']/../following-sibling::span[contains(@class,'row-part')]//div[contains(@class,'selectize-control')]'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.227" endtime="20190116 21:40:05.242"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:05.242" endtime="20190116 21:40:05.262"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:05.203" endtime="20190116 21:40:05.262"></status>
+</kw>
+<kw name="Items List::Dropdown Field Should Exist">
+<arguments>
+<arg>Domain</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.262" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.262" endtime="20190116 21:40:05.311"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//div[contains(@class,'selectize-control')]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.337" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='Domain']/../following-sibling::span[contains(@class,'row-part')]//div[contains(@class,'selectize-control')]'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.317" endtime="20190116 21:40:05.337"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:05.337" endtime="20190116 21:40:05.337"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:05.262" endtime="20190116 21:40:05.337"></status>
+</kw>
+<kw name="Items List::Input Field Should Exist">
+<arguments>
+<arg>CPU Type</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.337" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.337" endtime="20190116 21:40:05.357"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]</arg>
+<arg>${fieldName} is not a input field, or the field of ${fieldName} did not exist</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.387" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='CPU Type']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.367" endtime="20190116 21:40:05.387"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:05.387" endtime="20190116 21:40:05.387"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:05.337" endtime="20190116 21:40:05.387"></status>
+</kw>
+<kw name="Items List::Input Field Should Exist">
+<arguments>
+<arg>CPU Quantity</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.387" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.387" endtime="20190116 21:40:05.407"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]</arg>
+<arg>${fieldName} is not a input field, or the field of ${fieldName} did not exist</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.437" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='CPU Quantity']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.417" endtime="20190116 21:40:05.437"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:05.437" endtime="20190116 21:40:05.437"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:05.387" endtime="20190116 21:40:05.437"></status>
+</kw>
+<kw name="Items List::Input Field Should Exist">
+<arguments>
+<arg>RAM (GB)</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.437" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.437" endtime="20190116 21:40:05.457"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]</arg>
+<arg>${fieldName} is not a input field, or the field of ${fieldName} did not exist</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.477" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='RAM (GB)']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.467" endtime="20190116 21:40:05.487"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:05.487" endtime="20190116 21:40:05.487"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:05.437" endtime="20190116 21:40:05.487"></status>
+</kw>
+<kw name="Items List::Input Field Should Exist">
+<arguments>
+<arg>Users</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.487" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.487" endtime="20190116 21:40:05.507"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]</arg>
+<arg>${fieldName} is not a input field, or the field of ${fieldName} did not exist</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.527" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='Users']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.517" endtime="20190116 21:40:05.537"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:05.537" endtime="20190116 21:40:05.537"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:05.487" endtime="20190116 21:40:05.537"></status>
+</kw>
+<kw name="Items List::Input Field Should Exist">
+<arguments>
+<arg>Processes</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.537" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.537" endtime="20190116 21:40:05.557"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]</arg>
+<arg>${fieldName} is not a input field, or the field of ${fieldName} did not exist</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.577" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='Processes']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.567" endtime="20190116 21:40:05.577"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:05.577" endtime="20190116 21:40:05.587"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:05.537" endtime="20190116 21:40:05.587"></status>
+</kw>
+<kw name="Items List::Textarea Field Should Exist">
+<arguments>
+<arg>Services</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:05.587" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:05.587" endtime="20190116 21:40:05.607"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//textarea</arg>
+<arg>message=${fieldName} is not a textarea field, or the field of ${fieldName} did not exist</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190116 21:40:06.027" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190116 21:40:05.717" endtime="20190116 21:40:06.037"></status>
+</kw>
+<msg timestamp="20190116 21:40:06.037" level="FAIL">Services is not a textarea field, or the field of Services did not exist</msg>
+<status status="FAIL" starttime="20190116 21:40:05.617" endtime="20190116 21:40:06.037"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:06.037" endtime="20190116 21:40:06.037"></status>
+</kw>
+<msg timestamp="20190116 21:40:06.325" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="FAIL" starttime="20190116 21:40:05.587" endtime="20190116 21:40:06.037"></status>
+</kw>
+<status status="FAIL" starttime="20190116 21:40:05.202" endtime="20190116 21:40:06.325"></status>
+</kw>
+<status status="FAIL" starttime="20190116 21:40:05.202" endtime="20190116 21:40:06.325"></status>
+</kw>
+<kw name="Logoff" library="DCTLibrary" type="teardown">
+<doc>Close Browser asynchronously</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190116 21:40:06.325" endtime="20190116 21:40:08.522"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:06.325" endtime="20190116 21:40:08.522"></status>
+</kw>
+<msg timestamp="20190116 21:40:08.522" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="FAIL" starttime="20190116 21:39:47.786" endtime="20190116 21:40:08.522"></status>
+</kw>
+<kw name="Configuration Tab Is Added For Supporting Required Item Fields">
+<arguments>
+<arg>class=Device</arg>
+<arg>subclass=Virtual Machine</arg>
+</arguments>
+<kw name="On The Items List Page" library="DCTLibrary">
+<doc>Open browser and login dcTrack (default: _admin_) and enter the items list page.</doc>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${user}" != "${EMPTY}"</arg>
+<arg>Login</arg>
+<arg>&amp;{user}</arg>
+<arg>ELSE</arg>
+<arg>Login</arg>
+<arg>&amp;{administrator}</arg>
+</arguments>
+<kw name="Login" library="DCTLibrary">
+<doc>Prepare a dictionary variable as below:
+| =Variables= | =name= | =password= |
+| {'name': 'admin', 'password': 'sunbird'} | name=admin | password=xxx1234!!! |
+Usage:
+| Login | {'name': 'admin', 'password': 'sunbird'} |</doc>
+<arguments>
+<arg>&amp;{administrator}</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${headless}</arg>
+<arg>Open Headless Browser</arg>
+<arg>${dcTrackURL}</arg>
+<arg>${browser}</arg>
+<arg>ELSE</arg>
+<arg>Run Keywords</arg>
+<arg>Open Browser</arg>
+<arg>${dcTrackURL}</arg>
+<arg>${browser}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Open Browser</arg>
+<arg>${dcTrackURL}</arg>
+<arg>${browser}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${dcTrackURL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:08.532" level="INFO">Opening browser 'chrome' to base url 'https://140.124.181.93'.</msg>
+<status status="PASS" starttime="20190116 21:40:08.532" endtime="20190116 21:40:11.306"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190116 21:40:11.315" endtime="20190116 21:40:12.463"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:08.532" endtime="20190116 21:40:12.463"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:08.532" endtime="20190116 21:40:12.463"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='login']</arg>
+<arg>&amp;{account}[name]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:12.463" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='login']'.</msg>
+<status status="PASS" starttime="20190116 21:40:12.463" endtime="20190116 21:40:12.562"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='password']</arg>
+<arg>&amp;{account}[password]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:12.562" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20190116 21:40:12.562" endtime="20190116 21:40:12.640"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@value='Log in']</arg>
+</arguments>
+<msg timestamp="20190116 21:40:12.641" level="INFO">Clicking button 'xpath://input[@value='Log in']'.</msg>
+<status status="PASS" starttime="20190116 21:40:12.640" endtime="20190116 21:40:13.591"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://span[@class='app-spinner']</arg>
+<arg>timeout=1s</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://span[@class='app-spinner']</arg>
+<arg>timeout=1s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190116 21:40:15.238" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190116 21:40:14.886" endtime="20190116 21:40:15.238"></status>
+</kw>
+<msg timestamp="20190116 21:40:15.239" level="FAIL">Element 'xpath://span[@class='app-spinner']' did not appear in 1 second.</msg>
+<status status="FAIL" starttime="20190116 21:40:13.593" endtime="20190116 21:40:15.240"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:13.592" endtime="20190116 21:40:15.240"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` disappears from current page.</doc>
+<arguments>
+<arg>xpath://span[@class='app-spinner']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:15.241" endtime="20190116 21:40:15.249"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:08.532" endtime="20190116 21:40:15.249"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:08.522" endtime="20190116 21:40:15.249"></status>
+</kw>
+<kw name="Click Tab" library="DCTLibrary">
+<doc>Usage:
+| Click Tab | Assets |
+| Click Tab | Settings |
+| Click Tab | Assets | Items List |
+| Click Tab | Assets | File Import |
+| Click Tab | Settings | Locations |</doc>
+<arguments>
+<arg>Assets</arg>
+<arg>Items List</arg>
+</arguments>
+<kw name="Hover Tab" library="DCTLibrary">
+<doc>Hover with the mouse over the ``tabName`` tab menu</doc>
+<arguments>
+<arg>${tabName}</arg>
+</arguments>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath://*[text()='${tabName}']</arg>
+</arguments>
+<msg timestamp="20190116 21:40:15.251" level="INFO">Simulating Mouse Over on element 'xpath://*[text()='Assets']'.</msg>
+<status status="PASS" starttime="20190116 21:40:15.251" endtime="20190116 21:40:15.294"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[contains(@class, 'dropdown') and contains(@class, 'open')]//*[contains(@class,'dropdown')]</arg>
+<arg>timeout=${shortPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:15.295" endtime="20190116 21:40:15.585"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:15.250" endtime="20190116 21:40:15.585"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${itemName}"=="${EMPTY}"</arg>
+<arg>Click Element</arg>
+<arg>xpath://*[text()='${tabName}']</arg>
+<arg>ELSE</arg>
+<arg>Click Element</arg>
+<arg>xpath://*[text()='${itemName}']</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[text()='${itemName}']</arg>
+</arguments>
+<msg timestamp="20190116 21:40:15.586" level="INFO">Clicking element 'xpath://*[text()='Items List']'.</msg>
+<status status="PASS" starttime="20190116 21:40:15.586" endtime="20190116 21:40:16.100"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:15.585" endtime="20190116 21:40:16.101"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${tabName}' == 'Assets' and '${itemName}' == 'Items List'</arg>
+<arg>Items List::Wait Until Items List Page Is Visible</arg>
+</arguments>
+<kw name="Items List::Wait Until Items List Page Is Visible" library="DCTLibrary">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:16.104" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:16.103" endtime="20190116 21:40:18.827"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[@id='items-list']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>error=Current page is not items list</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:18.890" endtime="20190116 21:40:18.933"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[contains(@class, 'ui-grid-render-container-body')]//div[contains(@class, 'ui-grid-viewport')]//div[contains(@class, 'ui-grid-cell')]</arg>
+<arg>timeout=${longPeriodOfTime}</arg>
+<arg>error=Items list is not shown</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:18.934" endtime="20190116 21:40:19.019"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:19.019" endtime="20190116 21:40:19.022"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:16.103" endtime="20190116 21:40:19.022"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:16.101" endtime="20190116 21:40:19.023"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${tabName}' == 'Settings' and '${itemName}' == 'Models Library'</arg>
+<arg>Models Library::Wait Until Page Is Visible</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:19.023" endtime="20190116 21:40:19.023"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:15.250" endtime="20190116 21:40:19.023"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:08.522" endtime="20190116 21:40:19.024"></status>
+</kw>
+<kw name="Set Column Filter Conditions" library="Keywords">
+<arguments>
+<arg>Class</arg>
+<arg>${class}</arg>
+</arguments>
+<kw name="Select Column" library="Keywords">
+<arguments>
+<arg>${columnName}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:19.025" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:19.025" endtime="20190116 21:40:19.049"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), '${columnName}')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:19.062" level="INFO">Clicking element 'xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), 'Class')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]'.</msg>
+<status status="PASS" starttime="20190116 21:40:19.062" endtime="20190116 21:40:19.340"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:19.341" endtime="20190116 21:40:19.354"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:19.024" endtime="20190116 21:40:19.355"></status>
+</kw>
+<kw name="Select Filter Conditions" library="Keywords">
+<arguments>
+<arg>${conditions}</arg>
+</arguments>
+<kw name="${condition} IN [ @{conditions} ]" type="for">
+<kw name="${condition} = Device" type="foritem">
+<kw name="Click Filter Condition" library="Keywords">
+<arguments>
+<arg>${condition}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:19.358" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:19.357" endtime="20190116 21:40:19.416"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'dropdown-menu')]//a[normalize-space()='${condition}']</arg>
+</arguments>
+<msg timestamp="20190116 21:40:19.424" level="INFO">Clicking element 'xpath://*[contains(@class,'dropdown-menu')]//a[normalize-space()='Device']'.</msg>
+<status status="PASS" starttime="20190116 21:40:19.424" endtime="20190116 21:40:19.543"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${condition}' not in ['Check All', 'Uncheck All', 'Is Empty']</arg>
+<arg>Run Keywords</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://span[@class='text-success' and contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://span[@class='text-success']//*[contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://span[@class='text-success' and contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://span[@class='text-success']//*[contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://span[@class='text-success' and contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:19.546" endtime="20190116 21:40:20.675"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://span[@class='text-success']//*[contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:20.676" endtime="20190116 21:40:20.704"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:19.546" endtime="20190116 21:40:20.705"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:19.544" endtime="20190116 21:40:20.705"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:20.705" endtime="20190116 21:40:20.708"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:19.357" endtime="20190116 21:40:20.709"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:19.356" endtime="20190116 21:40:20.709"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:19.356" endtime="20190116 21:40:20.709"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:19.355" endtime="20190116 21:40:20.709"></status>
+</kw>
+<kw name="Select Column" library="Keywords">
+<arguments>
+<arg>${columnName}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:20.711" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:20.710" endtime="20190116 21:40:21.075"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), '${columnName}')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:21.079" level="INFO">Clicking element 'xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), 'Class')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]'.</msg>
+<status status="PASS" starttime="20190116 21:40:21.079" endtime="20190116 21:40:21.162"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:21.162" endtime="20190116 21:40:21.168"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:20.710" endtime="20190116 21:40:21.168"></status>
+</kw>
+<kw name="Items List::Wait Until Items List Page Is Visible" library="DCTLibrary">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:21.169" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:21.169" endtime="20190116 21:40:21.185"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[@id='items-list']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>error=Current page is not items list</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:21.192" endtime="20190116 21:40:21.195"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[contains(@class, 'ui-grid-render-container-body')]//div[contains(@class, 'ui-grid-viewport')]//div[contains(@class, 'ui-grid-cell')]</arg>
+<arg>timeout=${longPeriodOfTime}</arg>
+<arg>error=Items list is not shown</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:21.195" endtime="20190116 21:40:21.253"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:21.253" endtime="20190116 21:40:21.253"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:21.169" endtime="20190116 21:40:21.253"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:19.024" endtime="20190116 21:40:21.253"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${subclass}' != '${EMPTY}'</arg>
+<arg>Set Column Filter Conditions</arg>
+<arg>Subclass</arg>
+<arg>${subclass}</arg>
+<arg>ELSE</arg>
+<arg>Enter The Searching Text In Specific Column</arg>
+<arg>Mounting</arg>
+<arg>${mounting}</arg>
+</arguments>
+<kw name="Set Column Filter Conditions" library="Keywords">
+<arguments>
+<arg>Subclass</arg>
+<arg>${subclass}</arg>
+</arguments>
+<kw name="Select Column" library="Keywords">
+<arguments>
+<arg>${columnName}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:21.263" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:21.263" endtime="20190116 21:40:21.273"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), '${columnName}')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:21.283" level="INFO">Clicking element 'xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), 'Subclass')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]'.</msg>
+<status status="PASS" starttime="20190116 21:40:21.283" endtime="20190116 21:40:21.419"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:21.420" endtime="20190116 21:40:21.438"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:21.253" endtime="20190116 21:40:21.439"></status>
+</kw>
+<kw name="Select Filter Conditions" library="Keywords">
+<arguments>
+<arg>${conditions}</arg>
+</arguments>
+<kw name="${condition} IN [ @{conditions} ]" type="for">
+<kw name="${condition} = Virtual Machine" type="foritem">
+<kw name="Click Filter Condition" library="Keywords">
+<arguments>
+<arg>${condition}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:21.441" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:21.441" endtime="20190116 21:40:21.461"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'dropdown-menu')]//a[normalize-space()='${condition}']</arg>
+</arguments>
+<msg timestamp="20190116 21:40:21.468" level="INFO">Clicking element 'xpath://*[contains(@class,'dropdown-menu')]//a[normalize-space()='Virtual Machine']'.</msg>
+<status status="PASS" starttime="20190116 21:40:21.468" endtime="20190116 21:40:21.573"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${condition}' not in ['Check All', 'Uncheck All', 'Is Empty']</arg>
+<arg>Run Keywords</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://span[@class='text-success' and contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://span[@class='text-success']//*[contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://span[@class='text-success' and contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://span[@class='text-success']//*[contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://span[@class='text-success' and contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:21.574" endtime="20190116 21:40:23.024"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://span[@class='text-success']//*[contains(normalize-space(),'${condition}')]</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:23.025" endtime="20190116 21:40:23.063"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:21.574" endtime="20190116 21:40:23.063"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:21.574" endtime="20190116 21:40:23.063"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:23.063" endtime="20190116 21:40:23.063"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:21.440" endtime="20190116 21:40:23.063"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:21.440" endtime="20190116 21:40:23.063"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:21.440" endtime="20190116 21:40:23.063"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:21.439" endtime="20190116 21:40:23.063"></status>
+</kw>
+<kw name="Select Column" library="Keywords">
+<arguments>
+<arg>${columnName}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:23.070" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:23.070" endtime="20190116 21:40:23.090"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), '${columnName}')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:23.100" level="INFO">Clicking element 'xpath://*[contains(@class,'ui-grid-cell-contents') and contains(normalize-space(), 'Subclass')]/following-sibling::div//button[contains(@class,'grid-filter-btn')]'.</msg>
+<status status="PASS" starttime="20190116 21:40:23.090" endtime="20190116 21:40:23.173"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:23.173" endtime="20190116 21:40:23.179"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:23.070" endtime="20190116 21:40:23.180"></status>
+</kw>
+<kw name="Items List::Wait Until Items List Page Is Visible" library="DCTLibrary">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:23.182" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:23.181" endtime="20190116 21:40:23.202"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[@id='items-list']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+<arg>error=Current page is not items list</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:23.211" endtime="20190116 21:40:23.213"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[contains(@class,'active')]//div[contains(@class, 'ui-grid-render-container-body')]//div[contains(@class, 'ui-grid-viewport')]//div[contains(@class, 'ui-grid-cell')]</arg>
+<arg>timeout=${longPeriodOfTime}</arg>
+<arg>error=Items list is not shown</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:23.213" endtime="20190116 21:40:23.283"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:23.283" endtime="20190116 21:40:23.287"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:23.180" endtime="20190116 21:40:23.287"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:21.253" endtime="20190116 21:40:23.287"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:21.253" endtime="20190116 21:40:23.287"></status>
+</kw>
+<kw name="Open The First Item In Edit Mode" library="Keywords">
+<kw name="Select Item By Index" library="Keywords">
+<arguments>
+<arg>0</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:23.288" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:23.288" endtime="20190116 21:40:23.310"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:(//*[contains(@class, 'header-buttons') and contains(@class, 'ng-pristine')])[${index}+1]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:23.320" level="INFO">Clicking element 'xpath:(//*[contains(@class, 'header-buttons') and contains(@class, 'ng-pristine')])[0+1]'.</msg>
+<status status="PASS" starttime="20190116 21:40:23.310" endtime="20190116 21:40:23.431"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:23.433" endtime="20190116 21:40:23.442"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:23.288" endtime="20190116 21:40:23.443"></status>
+</kw>
+<kw name="Items List::Click ToolBar Button" library="Keywords">
+<arguments>
+<arg>Edit</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:23.444" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:23.443" endtime="20190116 21:40:23.472"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[contains(@class, 'active')]//button[normalize-space()='${buttonText}' and not(contains(@class, 'disabled'))]</arg>
+<arg>timeout=${shortPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:23.481" endtime="20190116 21:40:23.765"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[contains(@class, 'active')]//button[normalize-space()='${buttonText}' and not(contains(@class, 'disabled'))]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:23.766" level="INFO">Clicking button 'xpath://div[contains(@class, 'active')]//button[normalize-space()='Edit' and not(contains(@class, 'disabled'))]'.</msg>
+<status status="PASS" starttime="20190116 21:40:23.765" endtime="20190116 21:40:24.045"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:24.045" endtime="20190116 21:40:24.160"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:23.443" endtime="20190116 21:40:24.160"></status>
+</kw>
+<kw name="Items List::Wait Until Item Is Opened" library="DCTLibrary">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:24.163" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:24.162" endtime="20190116 21:40:24.217"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>"${item}" == "${EMPTY}"</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://li[contains(@class, 'list-detail-tabbar') and contains(@class, 'active') and normalize-space()='${item}']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:24.227" endtime="20190116 21:40:24.227"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[contains(@class, 'active')]//*[@id='identity_panel']//input[@id='tiName']</arg>
+<arg>timeout=${normalPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:24.228" endtime="20190116 21:40:25.418"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:25.418" endtime="20190116 21:40:25.421"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:24.161" endtime="20190116 21:40:25.422"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:23.288" endtime="20190116 21:40:25.422"></status>
+</kw>
+<kw name="Configuration Tab Should Exist">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:25.423" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:25.423" endtime="20190116 21:40:25.443"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://label[text()='Configuration']</arg>
+<arg>timeout=${shortPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:25.449" endtime="20190116 21:40:25.469"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:25.469" endtime="20190116 21:40:25.479"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:25.422" endtime="20190116 21:40:25.479"></status>
+</kw>
+<kw name="Items List::Click Detail Tab">
+<arguments>
+<arg>Configuration</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:25.479" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:25.479" endtime="20190116 21:40:25.539"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://label[text()='${tabName}']</arg>
+</arguments>
+<msg timestamp="20190116 21:40:25.570" level="INFO">Clicking element 'xpath://label[text()='Configuration']'.</msg>
+<status status="PASS" starttime="20190116 21:40:25.569" endtime="20190116 21:40:25.914"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:25.914" endtime="20190116 21:40:25.977"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:25.479" endtime="20190116 21:40:25.977"></status>
+</kw>
+<kw name="Configuration Panel Should Exist">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:25.979" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:25.978" endtime="20190116 21:40:25.995"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[@id='deviceConfig']</arg>
+<arg>timeout=${shortPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:26.010" endtime="20190116 21:40:26.068"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[@id='vmConfig']</arg>
+<arg>timeout=${shortPeriodOfTime}</arg>
+</arguments>
+<status status="PASS" starttime="20190116 21:40:26.068" endtime="20190116 21:40:26.100"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:26.100" endtime="20190116 21:40:26.100"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:25.977" endtime="20190116 21:40:26.100"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${subclass}' == 'Virtual Machine'</arg>
+<arg>Configuration Panel In VM Item Should Contain Type Of Fields</arg>
+<arg>ELSE</arg>
+<arg>Configuration Panel In Rackable Or Blade Server Item Should Contain Type Of Fields</arg>
+</arguments>
+<kw name="Configuration Panel In VM Item Should Contain Type Of Fields">
+<kw name="Items List::Dropdown Field Should Exist">
+<arguments>
+<arg>Operating System</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.100" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.100" endtime="20190116 21:40:26.120"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//div[contains(@class,'selectize-control')]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.160" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='Operating System']/../following-sibling::span[contains(@class,'row-part')]//div[contains(@class,'selectize-control')]'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.130" endtime="20190116 21:40:26.160"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:26.160" endtime="20190116 21:40:26.181"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:26.100" endtime="20190116 21:40:26.181"></status>
+</kw>
+<kw name="Items List::Dropdown Field Should Exist">
+<arguments>
+<arg>Domain</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.182" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.182" endtime="20190116 21:40:26.198"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//div[contains(@class,'selectize-control')]</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.226" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='Domain']/../following-sibling::span[contains(@class,'row-part')]//div[contains(@class,'selectize-control')]'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.208" endtime="20190116 21:40:26.226"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:26.226" endtime="20190116 21:40:26.226"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:26.181" endtime="20190116 21:40:26.226"></status>
+</kw>
+<kw name="Items List::Input Field Should Exist">
+<arguments>
+<arg>CPU Type</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.226" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.226" endtime="20190116 21:40:26.246"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]</arg>
+<arg>${fieldName} is not a input field, or the field of ${fieldName} did not exist</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.277" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='CPU Type']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.256" endtime="20190116 21:40:26.277"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:26.277" endtime="20190116 21:40:26.277"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:26.226" endtime="20190116 21:40:26.277"></status>
+</kw>
+<kw name="Items List::Input Field Should Exist">
+<arguments>
+<arg>CPU Quantity</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.277" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.277" endtime="20190116 21:40:26.297"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]</arg>
+<arg>${fieldName} is not a input field, or the field of ${fieldName} did not exist</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.327" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='CPU Quantity']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.307" endtime="20190116 21:40:26.327"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:26.327" endtime="20190116 21:40:26.327"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:26.277" endtime="20190116 21:40:26.327"></status>
+</kw>
+<kw name="Items List::Input Field Should Exist">
+<arguments>
+<arg>RAM (GB)</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.327" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.327" endtime="20190116 21:40:26.347"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]</arg>
+<arg>${fieldName} is not a input field, or the field of ${fieldName} did not exist</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.377" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='RAM (GB)']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.357" endtime="20190116 21:40:26.377"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:26.377" endtime="20190116 21:40:26.377"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:26.327" endtime="20190116 21:40:26.377"></status>
+</kw>
+<kw name="Items List::Input Field Should Exist">
+<arguments>
+<arg>Users</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.377" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.377" endtime="20190116 21:40:26.397"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]</arg>
+<arg>${fieldName} is not a input field, or the field of ${fieldName} did not exist</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.427" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='Users']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.407" endtime="20190116 21:40:26.427"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:26.427" endtime="20190116 21:40:26.427"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:26.377" endtime="20190116 21:40:26.427"></status>
+</kw>
+<kw name="Items List::Input Field Should Exist">
+<arguments>
+<arg>Processes</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.427" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.427" endtime="20190116 21:40:26.447"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]</arg>
+<arg>${fieldName} is not a input field, or the field of ${fieldName} did not exist</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.477" level="INFO">Current page contains element 'xpath://*[contains(@class,'active')]//*[normalize-space()='Processes']/../following-sibling::span[contains(@class,'row-part')]//input[not(@type='checkbox')]/parent::*[not(self::div[contains(@class,'selectize-input')])]'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.457" endtime="20190116 21:40:26.477"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:26.477" endtime="20190116 21:40:26.477"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:26.427" endtime="20190116 21:40:26.477"></status>
+</kw>
+<kw name="Items List::Textarea Field Should Exist">
+<arguments>
+<arg>Services</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${assetsFrame}</arg>
+</arguments>
+<msg timestamp="20190116 21:40:26.477" level="INFO">Selecting frame 'xpath://iframe[@id='id_assets_frame']'.</msg>
+<status status="PASS" starttime="20190116 21:40:26.477" endtime="20190116 21:40:26.497"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[contains(@class,'active')]//*[normalize-space()='${fieldName}']/../following-sibling::span[contains(@class,'row-part')]//textarea</arg>
+<arg>message=${fieldName} is not a textarea field, or the field of ${fieldName} did not exist</arg>
+<arg>loglevel=NONE</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190116 21:40:26.916" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190116 21:40:26.576" endtime="20190116 21:40:26.916"></status>
+</kw>
+<msg timestamp="20190116 21:40:26.916" level="FAIL">Services is not a textarea field, or the field of Services did not exist</msg>
+<status status="FAIL" starttime="20190116 21:40:26.507" endtime="20190116 21:40:26.916"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="teardown">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190116 21:40:26.916" endtime="20190116 21:40:26.926"></status>
+</kw>
+<msg timestamp="20190116 21:40:27.214" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="FAIL" starttime="20190116 21:40:26.477" endtime="20190116 21:40:26.926"></status>
+</kw>
+<status status="FAIL" starttime="20190116 21:40:26.100" endtime="20190116 21:40:27.214"></status>
+</kw>
+<status status="FAIL" starttime="20190116 21:40:26.100" endtime="20190116 21:40:27.214"></status>
+</kw>
+<kw name="Logoff" library="DCTLibrary" type="teardown">
+<doc>Close Browser asynchronously</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190116 21:40:27.214" endtime="20190116 21:40:29.429"></status>
+</kw>
+<status status="PASS" starttime="20190116 21:40:27.214" endtime="20190116 21:40:29.429"></status>
+</kw>
+<msg timestamp="20190116 21:40:29.429" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="FAIL" starttime="20190116 21:40:08.522" endtime="20190116 21:40:29.429"></status>
+</kw>
+<status status="FAIL" starttime="20190116 21:39:29.923" endtime="20190116 21:40:29.429" critical="yes">Several failures occurred:
+
+1) ElementNotVisibleException: Message: element not visible
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64)
+
+
+2) Services is not a textarea field, or the field of Services did not exist
+
+3) Services is not a textarea field, or the field of Services did not exist</status>
+</test>
+<status status="FAIL" starttime="20190116 21:39:29.674" endtime="20190116 21:40:29.437"></status>
+</suite>
+<status status="FAIL" starttime="20190116 21:39:29.674" endtime="20190116 21:40:29.437"></status>
+</suite>
+<status status="FAIL" starttime="20190116 21:39:29.653" endtime="20190116 21:40:29.447"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Test Automation">Test Automation</stat>
+<stat pass="0" fail="1" id="s1-s1" name="Regression Test">Test Automation.Regression Test</stat>
+<stat pass="0" fail="1" id="s1-s1-s1" name="TMD-5372 EITC001 Configuration tab is added for supporting required item fields">Test Automation.Regression Test.TMD-5372 EITC001 Configuration tab is added for supporting required item fields</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20190116 21:39:29.674" level="WARN">Error in file 'C:\Users\DCTRACK\Desktop\test_automation\Regression Test\Keywords.txt': Invalid syntax in keyword 'Select Filter Conditions': Using 'In' as a FOR loop separator is deprecated. Use 'IN' instead.</msg>
+<msg timestamp="20190116 21:39:29.684" level="WARN">Error in file 'C:\Users\DCTRACK\Desktop\test_automation\Regression Test\Keywords.txt': Invalid syntax in keyword 'Radio Selection Of Column Field Should Be': Using 'In Range' as a FOR loop separator is deprecated. Use 'IN RANGE' instead.</msg>
+</errors>
+</robot>

@@ -1,0 +1,228 @@
+On The Items List Page
+Login
+Input Text After It Is Visible
+Input Password After It Is Visible
+Click Button After It Is Visible
+Click Tab
+Hover Tab
+Mouse Over After It Is Visible
+Items List::Wait Until Items List Page Is Visible
+Select Frame After It Is Visible
+Open An Item With Edit Mode
+Items List::Select Item By Name
+Select Frame After It Is Visible
+Input Text After It Is Visible
+Press Key After It Is Visible
+Click Element After It Is Visible
+Items List::Click ToolBar Button
+Select Frame After It Is Visible
+Click Element After It Is Visible
+Items List::Wait Until Item Is Opened
+Select Frame After It Is Visible
+Items List::Fill In Detail Field
+Is Field Enabled
+Is Dropdown Field
+Input Field Content
+Input Text After It Is Visible
+Items List::The Toolbar Button Should Be Disabled
+Items List::Close The Current Item Tab
+Select Frame After It Is Visible
+Click Button After It Is Visible
+Items List::Warning Dialog::Click Yes
+Select Frame After It Is Visible
+Click Button After It Is Visible
+Items List::Click ToolBar Button
+Select Frame After It Is Visible
+Click Element After It Is Visible
+Items List::Wait Until Item Is Opened
+Select Frame After It Is Visible
+Value Of Field Should Be
+Items List::Fill In Detail Field
+Is Field Enabled
+Is Dropdown Field
+Input Field Content
+Input Text After It Is Visible
+Open Dropdown List
+Get Input Text By Field Name
+Select Frame After It Is Visible
+Get Text After It Is Visible
+Items List::Fill In Detail Field
+Is Field Enabled
+Is Dropdown Field
+Input Dropdown Field And Press Enter
+Items List::The Toolbar Button Should Be Disabled
+Items List::Close The Current Item Tab
+Select Frame After It Is Visible
+Click Button After It Is Visible
+Items List::Warning Dialog::Click Yes
+Select Frame After It Is Visible
+Click Button After It Is Visible
+Items List::Click ToolBar Button
+Select Frame After It Is Visible
+Click Element After It Is Visible
+Items List::Wait Until Item Is Opened
+Select Frame After It Is Visible
+Value Of Field Should Be
+Logoff
+Prepare The Existing Asset Tag And Item
+Open Item And Update Asset Tag
+Warning Message Should Be Displayed
+Warning Icon Should Be Shown At The Right Side Of TextBox
+Item Asset Tag Should Not Be Updated
+Update Asset Tag And Type
+Items List::Pick Unselected Content From Dropdown List
+Warning Message Should Be Displayed
+Warning Icon Should Be Shown At The Right Side Of TextBox
+Item Asset Tag Should Not Be Updated
+On The Items List Page
+Login
+Input Text After It Is Visible
+Input Password After It Is Visible
+Click Button After It Is Visible
+Click Tab
+Hover Tab
+Mouse Over After It Is Visible
+Items List::Wait Until Items List Page Is Visible
+Select Frame After It Is Visible
+Open An Item With Edit Mode
+Items List::Select Item By Name
+Select Frame After It Is Visible
+Input Text After It Is Visible
+Press Key After It Is Visible
+Click Element After It Is Visible
+Items List::Click ToolBar Button
+Select Frame After It Is Visible
+Click Element After It Is Visible
+Items List::Wait Until Item Is Opened
+Select Frame After It Is Visible
+Items List::Fill In Detail Field
+Is Field Enabled
+Is Dropdown Field
+Input Field Content
+Input Text After It Is Visible
+Items List::The Toolbar Button Should Be Disabled
+Items List::Close The Current Item Tab
+Select Frame After It Is Visible
+Click Button After It Is Visible
+Items List::Warning Dialog::Click Yes
+Select Frame After It Is Visible
+Click Button After It Is Visible
+Items List::Click ToolBar Button
+Select Frame After It Is Visible
+Click Element After It Is Visible
+Items List::Wait Until Item Is Opened
+Select Frame After It Is Visible
+Value Of Field Should Be
+Items List::Fill In Detail Field
+Is Field Enabled
+Is Dropdown Field
+Input Field Content
+Input Text After It Is Visible
+Open Dropdown List
+Get Input Text By Field Name
+Select Frame After It Is Visible
+Get Text After It Is Visible
+Items List::Fill In Detail Field
+Is Field Enabled
+Is Dropdown Field
+Input Dropdown Field And Press Enter
+Items List::The Toolbar Button Should Be Disabled
+Items List::Close The Current Item Tab
+Select Frame After It Is Visible
+Click Button After It Is Visible
+Items List::Warning Dialog::Click Yes
+Select Frame After It Is Visible
+Click Button After It Is Visible
+Items List::Click ToolBar Button
+Select Frame After It Is Visible
+Click Element After It Is Visible
+Items List::Wait Until Item Is Opened
+Select Frame After It Is Visible
+Value Of Field Should Be
+Logoff
+Prepare The Existing Asset Tag And Item
+Open Item And Update Asset Tag
+Warning Message Should Be Displayed
+Warning Icon Should Be Shown At The Right Side Of TextBox
+Item Asset Tag Should Not Be Updated
+Update Asset Tag And Type
+Items List::Pick Unselected Content From Dropdown List
+Warning Message Should Be Displayed
+Warning Icon Should Be Shown At The Right Side Of TextBox
+Item Asset Tag Should Not Be Updated
+On The Items List Page
+Login
+Input Text After It Is Visible
+Input Password After It Is Visible
+Click Button After It Is Visible
+Click Tab
+Hover Tab
+Mouse Over After It Is Visible
+Items List::Wait Until Items List Page Is Visible
+Select Frame After It Is Visible
+Open An Item With Edit Mode
+Items List::Select Item By Name
+Select Frame After It Is Visible
+Input Text After It Is Visible
+Press Key After It Is Visible
+Click Element After It Is Visible
+Items List::Click ToolBar Button
+Select Frame After It Is Visible
+Click Element After It Is Visible
+Items List::Wait Until Item Is Opened
+Select Frame After It Is Visible
+Items List::Fill In Detail Field
+Is Field Enabled
+Is Dropdown Field
+Input Field Content
+Input Text After It Is Visible
+Items List::The Toolbar Button Should Be Disabled
+Items List::Close The Current Item Tab
+Select Frame After It Is Visible
+Click Button After It Is Visible
+Items List::Warning Dialog::Click Yes
+Select Frame After It Is Visible
+Click Button After It Is Visible
+Items List::Click ToolBar Button
+Select Frame After It Is Visible
+Click Element After It Is Visible
+Items List::Wait Until Item Is Opened
+Select Frame After It Is Visible
+Value Of Field Should Be
+Items List::Fill In Detail Field
+Is Field Enabled
+Is Dropdown Field
+Input Field Content
+Input Text After It Is Visible
+Open Dropdown List
+Get Input Text By Field Name
+Select Frame After It Is Visible
+Get Text After It Is Visible
+Items List::Fill In Detail Field
+Is Field Enabled
+Is Dropdown Field
+Input Dropdown Field And Press Enter
+Items List::The Toolbar Button Should Be Disabled
+Items List::Close The Current Item Tab
+Select Frame After It Is Visible
+Click Button After It Is Visible
+Items List::Warning Dialog::Click Yes
+Select Frame After It Is Visible
+Click Button After It Is Visible
+Items List::Click ToolBar Button
+Select Frame After It Is Visible
+Click Element After It Is Visible
+Items List::Wait Until Item Is Opened
+Select Frame After It Is Visible
+Value Of Field Should Be
+Logoff
+Prepare The Existing Asset Tag And Item
+Open Item And Update Asset Tag
+Warning Message Should Be Displayed
+Warning Icon Should Be Shown At The Right Side Of TextBox
+Item Asset Tag Should Not Be Updated
+Update Asset Tag And Type
+Items List::Pick Unselected Content From Dropdown List
+Warning Message Should Be Displayed
+Warning Icon Should Be Shown At The Right Side Of TextBox
+Item Asset Tag Should Not Be Updated

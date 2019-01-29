@@ -1,0 +1,30 @@
+
+TMD-2561 NEW KEYWORDS :
++---------------+
+| KEYWORDS NAME |
++---------------+
+|      NAN      |
++---------------+
+
+
+TMD-2561 REUSE KEYWORDS :
++---------------------------------------------------+
+|                   KEYWORDS NAME                   |
++---------------------------------------------------+
+|                     Click Tab                     |
+|                       Login                       |
+|          Select Frame After It Is Visible         |
+|           Input Text After It Is Visible          |
+|           Mouse Over After It Is Visible          |
+|          Click Button After It Is Visible         |
+| Items List::Wait Until Items List Page Is Visible |
+|         Input Password After It Is Visible        |
+|                     Hover Tab                     |
+|               On The Items List Page              |
+|           Press Key After It Is Visible           |
+|       All Data In Column Should Contain Text      |
+|    Enter The Searching Text In Specific Column    |
+|                       Logoff                      |
+|            Get Text After It Is Visible           |
++---------------------------------------------------+
+

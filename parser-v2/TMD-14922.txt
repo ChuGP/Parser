@@ -1,0 +1,64 @@
+
+TMD-14922 NEW KEYWORDS :
++-----------------------------------------------------------------+
+|                          KEYWORDS NAME                          |
++-----------------------------------------------------------------+
+|          Capacity::Input Dropdown Field And Press Enter         |
+|         Set Option To Guarantee Cabinet Can Be Searched         |
+|               Capacity::Wait Until Page Is Visible              |
+|                    Input Search Informations                    |
+|                   Search Cabinet By Conditions                  |
+|                Capacity::Select Dropdown Content                |
+|              Capacity::Fill In Panel Field In List              |
+|                  Capacity::Input Field Content                  |
+|             Capacity::Wait Until Page Contain Field             |
+| Contents Of Power Ports Column Should Be Greater And Equal Than |
+|                     Capacity::Fill In Field                     |
+|               Set 4 Power Port Connect To Rack PDU              |
+|                      Capacity::Click Button                     |
+|                   Capacity::Is Dropdown Field                   |
++-----------------------------------------------------------------+
+
+
+TMD-14922 REUSE KEYWORDS :
++---------------+
+| KEYWORDS NAME |
++---------------+
+|     Logoff    |
+|     Login     |
+|   Hover Tab   |
+|   Click Tab   |
++---------------+
+
+
+TMD-14922 NEW KEYWORDS :
++-----------------------------------------------------------------+
+|                          KEYWORDS NAME                          |
++-----------------------------------------------------------------+
+|                    Input Search Informations                    |
+|                Capacity::Select Dropdown Content                |
+|                     Capacity::Fill In Field                     |
+| Contents Of Power Ports Column Should Be Greater And Equal Than |
+|               Capacity::Wait Until Page Is Visible              |
+|                   Capacity::Is Dropdown Field                   |
+|          Capacity::Input Dropdown Field And Press Enter         |
+|         Set Option To Guarantee Cabinet Can Be Searched         |
+|               Set 4 Power Port Connect To Rack PDU              |
+|                  Capacity::Input Field Content                  |
+|             Capacity::Wait Until Page Contain Field             |
+|                   Search Cabinet By Conditions                  |
+|              Capacity::Fill In Panel Field In List              |
+|                      Capacity::Click Button                     |
++-----------------------------------------------------------------+
+
+
+TMD-14922 REUSE KEYWORDS :
++---------------+
+| KEYWORDS NAME |
++---------------+
+|     Logoff    |
+|   Click Tab   |
+|     Login     |
+|   Hover Tab   |
++---------------+
+
